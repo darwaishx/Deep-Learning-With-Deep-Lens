@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Image Approval</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <style>
+    .col-centered {
+      float: none;
+      margin: 0 auto;
+    }
+
+    .centerContent{
+      text-align: center;
+    }
+
+    hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 18px 0;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="col-md-6 col-centered">
+      <!--Top Header-->
+      <div class="row topHeader">
+        <div class="col-md-12">
+          <h2>Approval Confirmation</h2>
+        </div>
+      </div>
+
+      <hr>
+
+      <!--Form-->
+      <div class="row">
+        <div id='image' class="col-md-12 centerContent">
+          <!--<img id="image" name="image">-->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" id="name" name="name" class="form-control" placeholder="Name">
+          <br><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button type="button" class="form-control btn btn-default" id="btn-send" onclick="approve()">Approve</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.188.0.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        taskTokenUrlEncoded = GetParameterValues('taskToken');
+        taskToken = decodeURIComponent(taskTokenUrlEncoded);
+        readItem(taskToken);
+
+        function GetParameterValues(param) {
+          var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+          for (var i = 0; i < url.length; i++) {
+            var urlparam = url[i].split('=');
+            if (urlparam[0] == param) {
+              return urlparam[1];
+            }
+          }
+        }
+      });
+
+      ///////////////////////////////////////////////
+      // Initialize AWS configuration.
+      AWS.config.region = 'us-east-1';
+
+      AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+         IdentityPoolId: 'us-east-1:41ea7eaa-bab9-434a-905f-85b835b97c2a'
+      });
+
+      // Make the call to obtain credentials
+      AWS.config.credentials.get(function(){
+        // Credentials will be available when this function is called.
+        var accessKeyId = AWS.config.credentials.accessKeyId;
+        var secretAccessKey = AWS.config.credentials.secretAccessKey;
+        var sessionToken = AWS.config.credentials.sessionToken;
+      });
+      ////////////////////////////////////////////////
+
+      var docClient = new AWS.DynamoDB.DocumentClient();
+
+      function readItem(taskToken) {
+        var table = "MLApprovals";
+
+        var params = {
+          TableName: table,
+          Key: {
+            "Token": taskToken
+          }
+        };
+
+        docClient.get(params, function(err, data) {
+          if (err) {
+            //alert("Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2));
+            alert(err);
+          } else {
+            $("#image").append("<img src='" + data.Item.S3Url + "' style='width: 50%; height: 50%'><br><br>");
+            //alert("GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2));
+          }
+        });
+      }
+
+      function approve(){
+        var nameValue = $("#name").val();
+        nameValue = jQuery.trim(nameValue);
+        if(nameValue.length <= 0){
+           alert("Enter name.");
+           return;
+        }
+
+        var apiUrl = 'https://1o1bhkc8r9.execute-api.us-east-1.amazonaws.com/respond/succeed?' + 'name=' + nameValue  + '&taskToken=' + taskTokenUrlEncoded;
+
+        $.ajax({
+           url: apiUrl
+          }).then(function(data) {
+            alert(JSON.stringify(data))
+          });
+      }
+    </script>
+</body>
+
+</html>

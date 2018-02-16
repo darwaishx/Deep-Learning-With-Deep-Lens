@@ -1,0 +1,97 @@
+---
+swagger: "2.0"
+info:
+  version: "2018-02-04T12:21:02Z"
+  title: "APIGatewayToStepFunctions"
+host: "1o1bhkc8r9.execute-api.us-east-1.amazonaws.com"
+basePath: "/respond"
+schemes:
+- "https"
+paths:
+  /fail:
+    get:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::111111111111:role/APIGatewayToStepFunctions"
+        responses:
+          default:
+            statusCode: "200"
+        uri: "arn:aws:apigateway:us-east-1:states:action/SendTaskSuccess"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        requestTemplates:
+          application/json: "{\n   \"output\": \"{\\\"approval\\\":\\\"rejected\\\"\
+            , \\\"taskToken\\\": \\\"$input.params('taskToken')\\\"}\",\n   \n   \"\
+            taskToken\": \"$input.params('taskToken')\"\n}"
+        type: "aws"
+  /succeed:
+    get:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::111111111111:role/APIGatewayToStepFunctions"
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:states:action/SendTaskSuccess"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        requestTemplates:
+          application/json: "{\n   \"output\": \"{\\\"approval\\\":\\\"approved\\\"\
+            , \\\"name\\\": \\\"$input.params('name')\\\", \\\"taskToken\\\": \\\"\
+            $input.params('taskToken')\\\"}\",\n   \n   \"taskToken\": \"$input.params('taskToken')\"\
+            \n}"
+        type: "aws"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'GET,OPTIONS'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        passthroughBehavior: "when_no_match"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        type: "mock"
+definitions:
+  Empty:
+    type: "object"
+    title: "Empty Schema"

@@ -82,10 +82,15 @@ _Rekognition will be consulted in order to check whether a face in the image sen
 
 1.	On your laptop, either open a terminal window (Mac) or cmd (Windows) in order to use the AWS CLI.
 2.	Type the following AWS CLI command to create a Rekognition collection:
-aws rekognition create-collection --collection-id "aiweek" --region us-east-1
+```aws rekognition create-collection --collection-id "aiweek" --region us-east-1```
 3.	Verify that your Rekognition collection has been created:
-aws rekognition list-collections --region us-east-1
+```aws rekognition list-collections --region us-east-1```
 4.	With the following command, you will see that there are currently no faces in your newly-created collection:
-aws rekognition list-faces --collection-id "aiweek" --region us-east-1
+```aws rekognition list-faces --collection-id "aiweek" --region us-east-1```
+5.	Add a face to your collection (use the image from the S3 bucket that you created in Lab 2)
+```aws rekognition index-faces --image '{"S3Object":{"Bucket":"[Your name or username]-ml-bucket","Name":"[image_name]"}}' --collection-id "aiweek" --detection-attributes "ALL" --region us-east-1```
+6.	Now list the faces in your collection again:
+```aws rekognition list-faces --collection-id "aiweek" --region us-east-1```
 
-_**Lab 3 Complete!  [Next: Lab 4 - Approval Verification Website](../4-Approval%20Verification%20Website/4%20-%20Approval%20Verification%20Website.md)**_
+
+_**Lab 3 Complete!  [Next: Lab 4 - Approval Verification Website](../4-Approval%20Verification%20Website/README.md)**_

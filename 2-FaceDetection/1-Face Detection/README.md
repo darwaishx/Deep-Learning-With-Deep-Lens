@@ -60,4 +60,4 @@ ssh aws_cam@192.168.86.120 cat /tmp/results.mjpeg | mplayer -demuxer lavf -lavfd
 
 1. Using your browser, open the AWS Lambda console at https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions.
 2. In the search box type deeplens-face-detection to find the lambda function for your project and click on the name of your lambda function.
-3. Replace code in lambda function with code from [this file]('facedetectioncrop.py')
+3. Replace code in lambda function with code from [this file](facedetectioncrop.py)

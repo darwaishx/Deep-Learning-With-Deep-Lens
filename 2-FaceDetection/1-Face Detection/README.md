@@ -38,7 +38,7 @@ Next you will deploy the Face Detection project you just created.
 
    This will take you to to device screen, which shows the progress of your project deployment.
 
-## Viewing AWS DeepLens Face Detection Project Output
+## View your project output
 
 1. You need mplayer to view the project output from Deeplens device. Install mplayer by using command below in the terminal window:
 
@@ -55,3 +55,9 @@ Example:
 ```
 ssh aws_cam@192.168.86.120 cat /tmp/results.mjpeg | mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 -
 ```
+
+## Crop face and send to cloud
+
+1. 1. Using your browser, open the AWS Lambda console at https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions.
+2. In the search box type deeplens-face-detection to find the lambda function for your project and click on the name of your lambda function.
+3. Replace code in lambda function with code from [this file]('./facedetectioncrop.py')

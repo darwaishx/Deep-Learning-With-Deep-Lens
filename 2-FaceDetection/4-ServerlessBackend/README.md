@@ -18,7 +18,7 @@ ARN - arn:aws:lambda:us-west-2:111111111111:function:StartWorkflow"). You will u
 this in step 10 below. Copy it into a text file for use in later steps also.
 8. Now click on the "StartWorkflow" icon in the center of the screen, and a "Function code"
 section will appear at the bottom of the screen (scroll down).
-9. Delete the existing code in that section, and replace it with [this code ](lambda.py).
+9. Delete the existing code in that section, and replace it with [lambda.py](lambda.py).
 10. In the code that you have just pasted, you will see two instances of the following string
 (search for them): 111111111111
 11. You must replace those instances with your own AWS Account number, which you

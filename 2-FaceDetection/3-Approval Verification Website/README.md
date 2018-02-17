@@ -64,7 +64,7 @@ _We will use a static website to host a web-page that will be used for approving
 _The document at the following link contains the HTML code for the static web page that will be used for allowing manual approval of images to be added to the Rekognition collection: [index.html](./index.html)_
 
 1. Copy the _[index.html](./index.html)_ file to your computer, save it as index.html, and make the following substitution:
-•	Replace “us-east-1:41ea7eaa-bab9-434a-905f-85b835b97c2a” with the identity pool ID you noted in section 1, step 7 above.
+   - Update cognitoIdentityPoolId with the identity pool ID you noted in section 1, step 7 above.
 
 _Next, we will upload that file to S3 according to the following steps:_
 

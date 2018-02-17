@@ -27,7 +27,7 @@ _We will use the AWS Step Functions service to define and control our overall wo
 }
 ```
 
-![](./Step_fns.png)
+![](images/Step_fns.png)
 
 6.	Click "Create State Machine" (at the bottom of the page).
 7.	On the left-hand side of the screen, click "Tasks", then click "Create new activity".
@@ -38,16 +38,16 @@ _We will use the AWS Step Functions service to define and control our overall wo
 
 1.	While still in the step functions console, on the left-hand side of the screen, click “Dashboard” (see screenshot below).
 
-![](./Test_step_fns.png)
+![](images/Test_step_fns.png)
 
 2.	Click directly on the state machine you just created (not on the radio button next to it) and then click “New execution”.
 3.	Enter a name for the execution test and then click “Start execution” (see screenshot below).
 
-![](./State_machines.png)
+![](images/State_machines.png)
 
 4.	This will simply go into the ManualApproval activity for now:
 
-![](./New_execution.png)
+![](images/New_execution.png)
 
 5.	Now click “Stop execution” in the top, right-hand corner of the screen.
 
@@ -58,7 +58,7 @@ _We will use the AWS Step Functions service to define and control our overall wo
 3.	Click "Get Started", and then click "OK".
 4.	Select the "Import from Swagger" option (see screenshot below).
 
-![](./Create_new_api.png)
+![](images/Create_new_api.png)
 
 5.	Click “Select Swagger File” and upload the swagger file you created in step 1 above.
 6.	Click "Import" (in the bottom, right-hand corner of the screen).
@@ -68,7 +68,7 @@ o	Stage name: respond
 8.	Click "Deploy".
 9.	Note the "Invoke URL" that gets created for this API.  Copy this to a text file because you will need it in a later step (see example screenshot below).
 
-![](./Invoke_url.png)
+![](images/Invoke_url.png)
 
 10.	Paste the invoke URL into a browser tab to ensure that the API is responding. For now it will just return an error saying “{"message":"Missing Authentication Token"}”, which is expected at this point, because the request has not gone through the expected end-to-end workflow.
 
@@ -82,11 +82,11 @@ o	Stage name: respond
 5.	Click “Upload”.
 6.	Now, in that bucket in S3, click on the file that you just uploaded, and then click “Make Public” (see screenshots below).
 
-![](./Make_public.png)
+![](images/Make_public.png)
 
 7.	Ensure that you can access your website via your browser by clicking on the link that is displayed at the bottom of the screen for that file (see screenshot above for reference).
 8.	You should see a web-page like this:
 
-![](./Approval_page.png)
+![](images/Approval_page.png)
 
 _**Lab 5 Complete! [Next: Lab 6 - Bringing it All Together](../6%20-%20Bringing%20it%20All%20Together/6%20-%20Bringing%20it%20All%20Together.md)**_

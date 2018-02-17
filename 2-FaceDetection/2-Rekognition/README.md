@@ -7,7 +7,7 @@
 3.	Log into the AWS Console before proceeding with the steps below: https://console.aws.amazon.com
 4.	For all steps (except IAM steps), ensure that the "US East (N Virginia)" region is selected in the top, right-hand corner of console screen (see screen-shot below).
 
-![](./Region.png)
+![](images/Region.png)
 
 ## 1. Create IAM Roles
 
@@ -20,11 +20,11 @@ _We need to create an IAM role to allow our Lambda functions to access AWS servi
 3.	Click “AWS service” and click “Lambda” (see screenshot below).
 4.	Click “Next: Permissions” (at the bottom of the screen).
 
-![](./Lambda_IAM_Screen1.png)
+![](images/Lambda_IAM_Screen1.png)
 
 5.	In the Search field, type _s3_, and then select “AmazonS3FullAccess” (i.e. click the checkbox to the left of “AmazonS3FullAccess”; see screenshot below).
 
-![](./Lambda_IAM_Screen2_Policy.png)
+![](images/Lambda_IAM_Screen2_Policy.png)
 
 6.	Repeat for other required services as follows…
 7.	In the Search field, type _step_, and then select “AWSStepFunctionsFullAccess”.
@@ -70,7 +70,7 @@ _As seen in the architecture diagram, Step Functions will be used to invoke the 
 _SES will be used to send an email from the “StartWorkflow” Lambda function we will create later in this workshop.  In order to do this, your email address must be registered with SES._
 
 1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “Simple Email Service” (you can find it by typing _ses_ into the search field at the top of the screen).
-2.	Click on “Manage Identities” 
+2.	Click on “Manage Identities”
 3.	On the left-hand side of the page, click “Email Addresses”, and then click “Verify a New Email Address”.
 4.	Enter your email address and click “Verify This Email Address”.
 5.	A verification email will be sent to your email address.  Open your email and click the verification link in that email.

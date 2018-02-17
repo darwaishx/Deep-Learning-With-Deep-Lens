@@ -25,20 +25,20 @@ _This function will be the heart of the entire workflow.  It will check to see i
 3.	Click “Create function”.
 4.	In the "Add Triggers" section on the left-hand side of the page, click "S3" (see screenshot below).
 
-![](./StartWorkflow.png)
+![](images/StartWorkflow.png)
 
 5.	In the "Configure triggers" section that appears at the bottom of the screen, configure the following details:
 * Bucket: [Select the name of the bucket you created in section 1, step 2 above]
 * Event type: Object Created (All)
 * Enable trigger: Yes [Checked]
 
-![](./Configure_triggers.png)
+![](images/Configure_triggers.png)
 
 6.	Click "Add" (at the bottom of the page), and then click "Save" (at the top of the page).
 8.	Now click on the "StartWorkflow" icon in the center of the screen, and a "Function code" section will appear at the bottom of the screen (scroll down).
 e.g.
 
-![](./Function_code.png)
+![](images/Function_code.png)
 
 9.	Delete the existing code in that section, and replace it with the code in Appendix A of this document.
 10.	In the code that you have just pasted, you will see two instances of the following string (search for them): 111111111111
@@ -51,7 +51,7 @@ e.g.
 15.	You must replace those email addresses with your own email address (the same one you registered with SES in Lab 3).
 16.	Scroll down further, and in the “Basic Settings” section, set the timeout to 5 minutes (see screenshot below).
 
-![](./Basic_settings.png)
+![](images/Basic_settings.png)
 
 17.	Click "Save" (at the top of the screen).
 
@@ -63,11 +63,11 @@ _We will create a test event within the Lambda console._
 2.	In the screen that appears (see screenshot below), click “Create new test event”.
 3.	In the “Event template” drop-down menu, select “S3 Put”.
 
-![](./Configure_test_event.png)
+![](images/Configure_test_event.png)
 
 4.	A set of auto-generated code will appear when you select that option.  In that code, change the key to the name of the test image you uploaded to your ML bucket when you created it (see screenshot below), and change the bucket name to the name of your ML bucket.
 
-![](./Configure_test_event2.png)
+![](images/Configure_test_event2.png)
 
 5.	Click “Save”.
 6.	Now, in the top, right-hand corner of the console screen, click the “Test” button.

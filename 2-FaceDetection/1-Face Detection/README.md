@@ -20,23 +20,18 @@ This returns you to the Projects screen where the project you just created is li
 
 ## Deploy your project
 
-In this walkthrough, you deploy the Face Detection project.
+Next you will deploy the Face Detection project you just created.
 
-Your web browser is the interface between you and your AWS DeepLens device. You perform all of the following activities on your browser after logging on to AWS:
-
-1. On the Projects screen, choose the radio button to the left of your project name, then choose Deploy to device.
+1. From Deeplens console, On the Projects screen, choose the radio button to the left of your project name, then choose Deploy to device.
 
 2. On the Target device screen, from the list of AWS DeepLens devices, choose the radio button to the left of the device that you want to deploy this project to. An AWS DeepLens device can have only one project deployed to it at a time.
 
 3. Choose Review.
 
-   If a project is already deployed to the device, you will see an error message that deploying this project will overwrite the project that is already running on the device. Choose Continue project.
-
    This will take you to the Review and deploy screen.
 
+   If a project is already deployed to the device, you will see an error message
+   "There is an existing project on this device. Do you want to replace it?
+   If you Deploy, AWS DeepLens will remove the current project before deploying the new project."
+
 4. On the Review and deploy screen, review your project and choose either Previous to go back and make changes, or Deploy to deploy the project.
-
-Important
-Deploying a project incurs costs for the AWS services that are used to run the project.
-
-For instructions on viewing your project's output, see Viewing AWS DeepLens Project Output.

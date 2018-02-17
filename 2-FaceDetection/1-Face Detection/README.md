@@ -35,3 +35,23 @@ Next you will deploy the Face Detection project you just created.
    If you Deploy, AWS DeepLens will remove the current project before deploying the new project."
 
 4. On the Review and deploy screen, review your project and choose either Previous to go back and make changes, or Deploy to deploy the project.
+
+   This will take you to to device screen, which shows the progress of your project deployment.
+
+## Viewing AWS DeepLens Face Detection Project Output
+
+1. You need mplayer to view the project output from Deeplens device. Install mplayer by using command below in the terminal window:
+
+```
+brew install mplayer
+```
+
+2. Wait until the project is deployed and you see the message Deployment of project Face-detection, version 0 succeeded. After project is successfully deployed, use the command below from terminal window to view project output stream:
+
+```
+ssh aws_cam@<IP Address of your deeplens device> cat /tmp/results.mjpeg | mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 -
+```
+Example:
+```
+ssh aws_cam@192.168.86.120 cat /tmp/results.mjpeg | mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 -
+```

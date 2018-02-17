@@ -138,6 +138,7 @@ In this section you will create resources including S3 bucket, Lambda function a
    ![](images/iotrulefinal01.png)
    - Attribute: face
    - Topic filter: Enter the name of IoT topic for your Deeplens device (example: $aws/things/deeplens_c1234562-ea5f-47e0-abd5-96f8123456f5/infer)
+   - Condition: confidence > 0.8
    ![](images/iotrulefinal02.png)
    - Under Set on or more actions:
       - Click Add action

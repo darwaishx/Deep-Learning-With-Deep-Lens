@@ -12,15 +12,15 @@
       - Either accept the default name for the project, or type a name you prefer.
       - Either accept the default description for the project, or type a description you prefer.
    - In the Project content section:
-      - Model—make sure the model is deeplens-object-detection. If it isn't, remove the current model then choose Add model. From the list of models, choose deeplens-object-detection.
-      - Function—make sure the function is deeplens-object-detection. If it isn't, remove the current function then choose Add function. From the list of functions, choose deeplens-object-detection.
+      - Model—make sure the model is deeplens-face-detection. If it isn't, remove the current model then choose Add model. From the list of models, choose deeplens-face-detection.
+      - Function—make sure the function is deeplens-face-detection. If it isn't, remove the current function then choose Add function. From the list of functions, choose deeplens-face-detection.
   - Choose Create.
 
 This returns you to the Projects screen where the project you just created is listed with your other projects.
 
 ## Deploy your project
 
-In this walkthrough, you deploy the Object Detection project.
+In this walkthrough, you deploy the Face Detection project.
 
 Your web browser is the interface between you and your AWS DeepLens device. You perform all of the following activities on your browser after logging on to AWS:
 

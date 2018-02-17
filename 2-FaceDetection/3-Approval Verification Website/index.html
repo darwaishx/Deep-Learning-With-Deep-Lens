@@ -75,6 +75,11 @@
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.188.0.min.js"></script>
 
     <script>
+
+      cognitoIdentityPoolId = 'YOUR-IdentityPoolId'
+      dynamoDBTableName = 'MLApprovals'
+      apiGatewayUrl = 'https://1o1bhkc8r9.execute-api.us-east-1.amazonaws.com/respond/succeed'
+
       $(document).ready(function() {
         taskTokenUrlEncoded = GetParameterValues('taskToken');
         taskToken = decodeURIComponent(taskTokenUrlEncoded);
@@ -96,7 +101,7 @@
       AWS.config.region = 'us-east-1';
 
       AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-         IdentityPoolId: 'us-east-1:41ea7eaa-bab9-434a-905f-85b835b97c2a'
+         IdentityPoolId: cognitoIdentityPoolId
       });
 
       // Make the call to obtain credentials
@@ -111,7 +116,7 @@
       var docClient = new AWS.DynamoDB.DocumentClient();
 
       function readItem(taskToken) {
-        var table = "MLApprovals";
+        var table = dynamoDBTableName;
 
         var params = {
           TableName: table,
@@ -122,11 +127,9 @@
 
         docClient.get(params, function(err, data) {
           if (err) {
-            //alert("Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2));
             alert(err);
           } else {
             $("#image").append("<img src='" + data.Item.S3Url + "' style='width: 50%; height: 50%'><br><br>");
-            //alert("GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2));
           }
         });
       }
@@ -139,7 +142,7 @@
            return;
         }
 
-        var apiUrl = 'https://1o1bhkc8r9.execute-api.us-east-1.amazonaws.com/respond/succeed?' + 'name=' + nameValue  + '&taskToken=' + taskTokenUrlEncoded;
+        var apiUrl = apiGatewayUrl + '?name=' + nameValue  + '&taskToken=' + taskTokenUrlEncoded;
 
         $.ajax({
            url: apiUrl

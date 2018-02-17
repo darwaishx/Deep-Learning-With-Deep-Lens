@@ -12,7 +12,7 @@ _Cognito will be used to assign temporary credentials for securely accessing AWS
 6.	In the screen that appears, click “Allow” (in the bottom, right-hand corner of the screen).
 7.	Note the identity pool ID that is displayed in the center of the screen (please see the following example screenshot).
 
-![](./Cognito_ID_Pool_ID.png)
+![](images/Cognito_ID_Pool_ID.png)
 
 8.	Copy that into a text file because you will use it in a later step.
 
@@ -41,7 +41,7 @@ _This is the bucket to which DeepLens will upload images._
 *	Region: US East (N. Virginia)
 3.	Click "Create".
 
-![](./ML_Bucket.png)
+![](images/ML_Bucket.png)
 
 ## 3. Create S3 Bucket for Static Website Hosting
 
@@ -74,12 +74,12 @@ _Next, we will upload that file to S3 according to the following steps:_
 4.	Click “Upload”.
 5.	Now, in that bucket in S3, click on the file that you just uploaded, and then click “Make Public” (see screenshot below).
 
-![](./Make_public.png)
+![](images/Make_public.png)
 
 6.	Ensure that you can access your website via your browser by clicking on the link that is displayed at the bottom of the screen for that file (see screenshot above for reference).
 7.	You should see a web-page like this:
 
-![](./Approval_page.png)
+![](images/Approval_page.png)
 
 
 _**Lab 4 Complete! [Next: Lab 5 - Approval Workflow](../5-Approval%20Workflow/5-Approval%20Workflow.md)**_

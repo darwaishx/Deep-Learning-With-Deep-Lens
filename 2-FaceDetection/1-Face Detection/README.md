@@ -72,7 +72,7 @@ In this section you will update the lambda function that is part of face detecti
 
 1. Using your browser, open the AWS Lambda console at https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions.
 2. In the search box type deeplens-face-detection to find the lambda function for your project and click on the name of your lambda function.
-3. Replace code in lambda function with code from [this file](facedetectioncrop.py) and click Save.
+3. Replace code in lambda function with code from [facecrop.py](facecrop.py) and click Save.
 4. Click on Action and then Publish a new version.
 5. Enter version description and click Publish.
 6. Open the AWS DeepLens console at https://console.aws.amazon.com/deeplens/.
@@ -126,7 +126,7 @@ In this section you will create resources including S3 bucket, Lambda function a
    - Existing role*: Select the role you created in previous lab dlworkshop-lambda-iottos3.
    ![](images/lambdaiottos3create.png)
    - Click Create function.
-3. Replace code with code from [dlworkshop-iottos3.py](dlworkshop-iottos3.py) and click Save.
+3. Replace code with code from [iottos3.py](iottos3.py) and click Save.
 4. Click on drop down Select a test event... and click Configure test events
    - Leave the defaults as Create new test event and Event template Hello World
    - Event name: Test

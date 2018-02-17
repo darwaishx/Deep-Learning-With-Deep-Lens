@@ -26,10 +26,7 @@ def cropFace(img, x, y, w, h):
 
     #Convert to jpeg
     ret,jpeg = cv2.imencode('.jpg', cimg)
-    if ret == False:
-        face = "Failed to get image from imencode."
-    else:
-        face = base64.b64encode(jpeg.tobytes())
+    face = base64.b64encode(jpeg.tobytes())
 
     return face
 

@@ -1,5 +1,49 @@
 # Lab 1 - Face Detection Using Deep Lens
 
+## Preparation
+
+### Create S3 Bucket and IAM Role
+
+_We need to create an S3 bucket that will be used for uploading images of detected faces from the DeepLens device.  We will also create a role that will allow our Lambda functions (created in later steps) to access this bucket._
+
+#### Create a Bucket for Uploading Images of Faces
+
+_This is the bucket to which DeepLens will upload images._
+
+1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “S3” (you can find it by typing _s3_ into the search field at the top of the screen).
+2.	Click "Create bucket", and enter the following details:
+*	Bucket name: _[Your name or username]-ml-bucket_
+*	Region: US East (N. Virginia)
+3.	Click "Create".
+
+![](images/ML_Bucket.png)
+
+#### Create an IAM Role
+
+_ This will allow our Lambda function (created in later steps) to access our S3 bucket, and other services that will be used in later parts of this workshop._
+
+1.	To access the IAM Console: In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “IAM” (you can find it by typing _iam_ into the search field at the top of the screen).
+2.	On the left-hand side of the screen, click "Roles", and then click “Create Role”.
+3.	Click “AWS service” and click “Lambda” (see screenshot below).
+4.	Click “Next: Permissions” (at the bottom of the screen).
+
+![](images/Lambda_IAM_Screen1.png)
+
+5.	In the Search field, type _s3_, and then select “AmazonS3FullAccess” (i.e. click the checkbox to the left of “AmazonS3FullAccess”; see screenshot below).
+
+![](images/Lambda_IAM_Screen2_Policy.png)
+
+6.	Repeat for other required services as follows…
+7.	In the Search field, type _step_, and then select “AWSStepFunctionsFullAccess”.
+8.	In the Search field, type _rek_, and then select “AmazonRekognitionFullAccess”.
+9.	In the Search field, type _dyn_, and then select “AmazonDynamoDBFullAccess”.
+10.	In the Search field, type _ses_, and then select “AmazonSESFullAccess”.
+11.	In the Search field, type _cog_, and then select “AmazonCognitoPowerUser”.
+12.	Click “Next: Review” (at the bottom of the screen).
+13.	In the “Role name” text box, type AI_ML_Lambda_Role
+14.	Click “Create role” (at the bottom of the screen).
+
+
 ## Create Your Project
 
 1. Using your browser, open the AWS DeepLens console at https://console.aws.amazon.com/deeplens/.

@@ -135,8 +135,10 @@ In this section you will create resources including S3 bucket, Lambda function a
 2. Click on Act and click Create.
 3. On Create a rule screen, complete following:
    - Name: Enter FaceDetection
+   ![](images/iotrulefinal01.png)
    - Attribute: face
    - Topic filter: Enter the name of IoT topic for your Deeplens device (example: $aws/things/deeplens_c1234562-ea5f-47e0-abd5-96f8123456f5/infer)
+   ![](images/iotrulefinal02.png)
    - Under Set on or more actions:
       - Click Add action
       - Under Select an action, choose Invoke a Lambda function passing the message.
@@ -145,8 +147,6 @@ In this section you will create resources including S3 bucket, Lambda function a
       - On Configure action screen, under Function name, select the dlworkshop-iottos3 lambda function.
       ![](images/iotaddactionfinal.png)
       - Click Add action
-      ![](images/iotrulefinal01.png)
-      ![](images/iotrulefinal02.png)
       ![](images/iotrulefinal03.png)
       - Click Create rule.
 

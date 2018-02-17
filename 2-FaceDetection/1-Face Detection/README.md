@@ -8,12 +8,12 @@
 - Choose Use a project template, then choose Face detection.
 - Scroll to the bottom of the screen, then choose Next.
 4. On the Specify project details screen
-  - In the Project information section:
-   - Either accept the default name for the project, or type a name you prefer.
-   - Either accept the default description for the project, or type a description you prefer.
-  - In the Project content section:
-   - Model—make sure the model is deeplens-object-detection. If it isn't, remove the current model then choose Add model. From the list of models, choose deeplens-object-detection.
-   - Function—make sure the function is deeplens-object-detection. If it isn't, remove the current function then choose Add function. From the list of functions, choose deeplens-object-detection.
+   - In the Project information section:
+      - Either accept the default name for the project, or type a name you prefer.
+      - Either accept the default description for the project, or type a description you prefer.
+   - In the Project content section:
+      - Model—make sure the model is deeplens-object-detection. If it isn't, remove the current model then choose Add model. From the list of models, choose deeplens-object-detection.
+      - Function—make sure the function is deeplens-object-detection. If it isn't, remove the current function then choose Add function. From the list of functions, choose deeplens-object-detection.
   - Choose Create.
 
 This returns you to the Projects screen where the project you just created is listed with your other projects.

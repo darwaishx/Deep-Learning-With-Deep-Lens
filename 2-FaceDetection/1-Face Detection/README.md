@@ -6,7 +6,9 @@
 2. Choose Projects, then choose Create new project.
 3. On the Choose project type screen
 - Choose Use a project template, then choose Face detection.
+
 ![](images/dlprojecttemplate.png)
+
 - Scroll to the bottom of the screen, then choose Next.
 4. On the Specify project details screen
    - In the Project information section:
@@ -15,7 +17,9 @@
    - In the Project content section:
       - Model—make sure the model is deeplens-face-detection. If it isn't, remove the current model then choose Add model. From the list of models, choose deeplens-face-detection.
       - Function—make sure the function is deeplens-face-detection. If it isn't, remove the current function then choose Add function. From the list of functions, choose deeplens-face-detection.
+
       ![](images/dlprojectcontent.png)
+
   - Choose Create.
 
 This returns you to the Projects screen where the project you just created is listed with your other projects.
@@ -25,9 +29,13 @@ This returns you to the Projects screen where the project you just created is li
 Next you will deploy the Face Detection project you just created.
 
 1. From Deeplens console, On the Projects screen, choose the radio button to the left of your project name, then choose Deploy to device.
+
 ![](images/dlprojecthome.png)
+
 2. On the Target device screen, from the list of AWS DeepLens devices, choose the radio button to the left of the device that you want to deploy this project to. An AWS DeepLens device can have only one project deployed to it at a time.
+
 ![](images/dlprojecttargetdevice.png)
+
 3. Choose Review.
 
    This will take you to the Review and deploy screen.

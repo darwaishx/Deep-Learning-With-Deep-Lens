@@ -64,7 +64,7 @@ _We will use the AWS Step Functions service to define and control our overall wo
 8.	Type ManualStep in the "Activity Name" textbox, and then click "Create Activity".
 
 
-## Test Step Functions
+### Test Step Functions
 
 1.	While still in the step functions console, on the left-hand side of the screen, click “Dashboard”.
 
@@ -102,9 +102,9 @@ o	Stage name: respond
 
 10.	Paste the invoke URL into a browser tab to ensure that the API is responding. For now it will just return an error saying “{"message":"Missing Authentication Token"}”, which is expected at this point, because the request has not gone through the expected end-to-end workflow.
 
-# Approval Verification Website
+## Approval Verification Website
 
-## Create Cognito Identity Pool
+### Create Cognito Identity Pool
 
 _Cognito will be used to assign temporary credentials for securely accessing AWS resources used in this workshop. (For more information: https://aws.amazon.com/cognito/)_
 
@@ -120,7 +120,7 @@ _Cognito will be used to assign temporary credentials for securely accessing AWS
 
 8.	Copy that into a text file because you will use it in a later step.
 
-## Update the Cognito IAM Role to Allow Access to AWS Resources
+### Update the Cognito IAM Role to Allow Access to AWS Resources
 
 1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “IAM” (you can find it by typing _iam_ into the search field at the top of the screen).
 2.	On the left-hand side of the screen, click "Roles".
@@ -134,7 +134,7 @@ _Cognito will be used to assign temporary credentials for securely accessing AWS
 10.	Click “Attach policy” (at the bottom, right-hand corner of the screen).
 11.	Repeat steps 1 to 10 for the “Cognito_ML_ID_PoolAuth_Role”.
 
-## Create S3 Bucket for Static Website Hosting
+### Create S3 Bucket for Static Website Hosting
 
 _We will use a static website to host a web-page that will be used for approving unrecognized faces to be added to our Rekognition collection._
 
@@ -149,7 +149,7 @@ _We will use a static website to host a web-page that will be used for approving
 6.	In the "Index document" textbox, type index.html
 7.	Click "Save".
 
-## Create the Approval Static Web Page
+### Create the Approval Static Web Page
 
 _The document at the following link contains the HTML code for the static web page that will be used for allowing manual approval of images to be added to the Rekognition collection: [index.html](./index.html)_
 

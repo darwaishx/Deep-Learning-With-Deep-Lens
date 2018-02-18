@@ -14,8 +14,8 @@ _SES will be used to send an email from the “StartWorkflow” Lambda function 
 
 1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “DynamoDB” (you can find it by typing _dyn_ into the search field at the top of the screen).
 2.	Click "Create table", and enter the following details:
-* Table name: MLApprovals
-*	Primary key: Token  
+* Table name: DLApprovals
+*	Primary key: ImageId  
 3.	Click "Create".
 
 ## Create Lambda Functions

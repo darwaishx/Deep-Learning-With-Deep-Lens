@@ -81,9 +81,11 @@
       apiGatewayUrl = 'https://YOUR-APIGatewayEndPoint.execute-api.us-east-1.amazonaws.com/respond/succeed'
 
       $(document).ready(function() {
+        imageIdUrlEncoded = GetParameterValues('ImageId');
         taskTokenUrlEncoded = GetParameterValues('taskToken');
         taskToken = decodeURIComponent(taskTokenUrlEncoded);
-        readItem(taskToken);
+        imageId = decodeURIComponent(imageIdUrlEncoded);
+        readItem(imageId);
 
         function GetParameterValues(param) {
           var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -114,22 +116,23 @@
       ////////////////////////////////////////////////
 
       var docClient = new AWS.DynamoDB.DocumentClient();
-
-      function readItem(taskToken) {
+      function readItem(imageId) {
         var table = dynamoDBTableName;
 
         var params = {
           TableName: table,
           Key: {
-            "Token": taskToken
+            "ImageId": imageId
           }
         };
 
         docClient.get(params, function(err, data) {
           if (err) {
+            //alert("Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2));
             alert(err);
           } else {
             $("#image").append("<img src='" + data.Item.S3Url + "' style='width: 50%; height: 50%'><br><br>");
+            //alert("GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2));
           }
         });
       }
@@ -142,7 +145,7 @@
            return;
         }
 
-        var apiUrl = apiGatewayUrl + '?name=' + nameValue  + '&taskToken=' + taskTokenUrlEncoded;
+        var apiUrl = apiGatewayUrl + '?name=' + nameValue  + '&imageId=' + imageIdUrlEncoded +  '&taskToken=' + taskTokenUrlEncoded;
 
         $.ajax({
            url: apiUrl

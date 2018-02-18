@@ -1,13 +1,28 @@
 
 # Rekognition (Deep learning-based image and video analysis)
 
+Amazon Rekognition provides Deep learning-based image and video analysis. It provides key features:
+- Object, scene and activity detection
+[](objectscene.png)
+- Facial recognition
+[](facial.png)
+- Facial analysis
+[](facialanalysis.png)
+- Person tracking
+[](persontracking.png)
+- Unsafe content detection
+- Celebrity recognition
+[](celebrity.png)
+- Text in images
+[](text.png)
+
 ## Rekognition Introduction
 1. In AWS Console go to Rekognition at https://console.aws.amazon.com/rekognition/home?region=us-east-1#/.
 2. In the left navigation click on Object and scene detection and notice how Rekognition return labels for objects and activities detected in the image.
 3. In the left navigation click on Face comparison to see how Rekognition let you compare two faces and gives a confidence score on how closely they match.
 4. You can explore other feature including Image moderation, Facial analysis, Celebrity recognition and Text in image.
 
-##Rekognition Collections
+## Rekognition Collections
 Amazon Rekognition can store information about detected faces in server-side containers known as collections. You can use the facial information stored in a collection to search for known faces in images, stored videos and streaming videos. You will use AWS CLI to create and manage Rekognition collections.
 
 ### Configure AWS CLI

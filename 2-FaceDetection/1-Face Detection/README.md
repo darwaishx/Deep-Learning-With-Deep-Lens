@@ -195,4 +195,5 @@ _This will allow our Lambda function (created in later steps) to access our S3 b
 1. Go to S3 bucket and you should now see images coming from Deeplens
 2. Verify that you have images coming from Deeplens before continuing to next lab.
 
-[Continue to Next Lab](../2-Rekognition)
+##
+You have successfully created and deployed a face detection project on DeepLens. You also modified the default project so when DeepLens detect a human face, it will crop the face and store as image in S3. In the next [Rekognition](../2-Rekognition), you will learn how Amazon Rekognition provides Deep learning-based image and video analysis capabilities including face verification.

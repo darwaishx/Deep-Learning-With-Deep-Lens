@@ -66,7 +66,7 @@ _We will use the AWS Step Functions service to define and control our overall wo
 
 ## Test Step Functions
 
-1.	While still in the step functions console, on the left-hand side of the screen, click “Dashboard” (see screenshot below).
+1.	While still in the step functions console, on the left-hand side of the screen, click “Dashboard”.
 
 ![](images/Test_step_fns.png)
 
@@ -101,26 +101,6 @@ o	Stage name: respond
 ![](images/Invoke_url.png)
 
 10.	Paste the invoke URL into a browser tab to ensure that the API is responding. For now it will just return an error saying “{"message":"Missing Authentication Token"}”, which is expected at this point, because the request has not gone through the expected end-to-end workflow.
-
-
-## Update the Face Approval Page With the Invoke URL of API Gateway
-
-1.	Edit the index.html file that you had saved on your computer in Lab 4, and replace the string **https://1o1bhkc8r9.execute-api.us-east-1.amazonaws.com/respond** with the invoke URL you noted in step 9 of section 3 above.
-2.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “S3” (you can find it by typing _s3_ into the search field at the top of the screen).
-3.	Click on the bucket you created for your static website (i.e. [Your name or username]-web), and then click “Upload”.
-4.	Either drag and drop your index.html file into that space, or click “Add files” to browse for the file on your computer (see screenshot below).
-5.	Click “Upload”.
-6.	Now, in that bucket in S3, click on the file that you just uploaded, and then click “Make Public” (see screenshots below).
-
-![](images/Make_public.png)
-
-7.	Ensure that you can access your website via your browser by clicking on the link that is displayed at the bottom of the screen for that file (see screenshot above for reference).
-8.	You should see a web-page like this:
-
-![](images/Approval_page.png)
-
-_**Lab 5 Complete! [Next: Lab 6 - Bringing it All Together](../6%20-%20Bringing%20it%20All%20Together/6%20-%20Bringing%20it%20All%20Together.md)**_
-
 
 # Approval Verification Website
 
@@ -161,7 +141,7 @@ _We will use a static website to host a web-page that will be used for approving
 1. In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “S3” (you can find it by typing _s3_ into the search field at the top of the screen).
 2. Click "Create bucket", and enter the following details:
 *	Bucket name: [Your name or username]-web
-*	Region: US West (Oregon)
+*	Region: US East-1 (Virginia)
 2.	Click "Create".
 3.	Now, in your list of S3 buckets, click on the bucket you just created (i.e. [Your name or username]-web).
 4.	Click on the "Properties" tab and click on "Static website hosting".
@@ -169,28 +149,23 @@ _We will use a static website to host a web-page that will be used for approving
 6.	In the "Index document" textbox, type index.html
 7.	Click "Save".
 
-
 ## Create the Approval Static Web Page
 
 _The document at the following link contains the HTML code for the static web page that will be used for allowing manual approval of images to be added to the Rekognition collection: [index.html](./index.html)_
 
 1. Copy the _[index.html](./index.html)_ file to your computer, save it as index.html, and make the following substitution:
-   - Update cognitoIdentityPoolId with the identity pool ID you noted in section 1, step 7 above.
-
+```
+cognitoIdentityPoolId = 'YOUR-IdentityPoolId'
+apiGatewayUrl = 'https://YOUR-APIGatewayEndPoint.execute-api.us-east-1.amazonaws.com/respond/succeed'
+```
 _Next, we will upload that file to S3 according to the following steps:_
 
 1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “S3” (you can find it by typing _s3_ into the search field at the top of the screen).
 2.	In your list of S3 buckets, click on the bucket you created in section 1.2, step 1.(i.e. [Your name or username]-web), and click “Upload”.
 3.	Either drag and drop your file into that space, or click “Add files” browse for the file on your computer.
 4.	Click “Upload”.
-5.	Now, in that bucket in S3, click on the file that you just uploaded, and then click “Make Public” (see screenshot below).
-
-![](images/Make_public.png)
-
+5.	Now, in that bucket in S3, click on the file that you just uploaded, and then click “Make Public”.
 6.	Ensure that you can access your website via your browser by clicking on the link that is displayed at the bottom of the screen for that file (see screenshot above for reference).
 7.	You should see a web-page like this:
 
 ![](images/Approval_page.png)
-
-
-_**Lab 4 Complete! [Next: Lab 5 - Approval Workflow](../5-Approval%20Workflow/5-Approval%20Workflow.md)**_

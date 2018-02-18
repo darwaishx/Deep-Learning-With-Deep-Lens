@@ -42,18 +42,24 @@ aws rekognition create-collection --collection-id "dl-faces" --region us-east-1
 ```
 aws rekognition list-collections --region us-east-1
 ```
-4.	With the following command, you will see that there are currently no faces in your newly-created collection:
+4. With the following command, you will see that there are currently no faces in your newly-created collection:
 ```
 aws rekognition list-faces --collection-id "dl-faces" --region us-east-1
 ```
-5.	Add a face to your collection by using an image from S3 bucket you created in previous module.
+5. Upload images [jb.jpg](jb.jpg), [andy1.jpg](andy1.jpg) and [andy2.jpg](andy2.jpg) to your S3 bucket _[Your name or username]-dl-faces_.
+
+6. Add both jb.jpg and andy1.jpg to Rekognition collection
 ```
-aws rekognition index-faces --image '{"S3Object":{"Bucket":"[Your name or username]-dl-faces","Name":"[image_name]"}}' --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
+aws rekognition index-faces --image '{"S3Object":{"Bucket":"[Your name or username]-dl-faces","Name":"jb.jpg"}}' --external-image-id "JB" --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
 ```
-6.	Now list the faces in your collection again:
 ```
-aws rekognition list-faces --collection-id "aiweek" --region us-east-1
+aws rekognition index-faces --image '{"S3Object":{"Bucket":"[Your name or username]-dl-faces","Name":"andy1.jpg"}}' --external-image-id "Andy" --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
 ```
+6.	Now list the faces in your collection again and you should see JSON reponse with two faces in your Rekognition collection.
+```
+aws rekognition list-faces --collection-id "dl-faces" --region us-east-1
+```
+![](images/listfaces.png)
 7. To delete a face from your collection, use the face-id
 ```
 aws rekognition delete-faces --collection-id "dl-faces" --face-ids "FACE-ID-To-DELETE, GET FaceID FROM list-faces"

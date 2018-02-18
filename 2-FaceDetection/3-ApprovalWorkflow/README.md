@@ -136,10 +136,10 @@ _We will use a static website to host a web-page that will be used for approving
 
 1. In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “S3” (you can find it by typing _s3_ into the search field at the top of the screen).
 2. Click "Create bucket", and enter the following details:
-*	Bucket name: [Your name or username]-web
+*	Bucket name: [Your name or username]-dl-web
 *	Region: US East-1 (Virginia)
 2.	Click "Create".
-3.	Now, in your list of S3 buckets, click on the bucket you just created (i.e. [Your name or username]-web).
+3.	Now, in your list of S3 buckets, click on the bucket you just created (i.e. [Your name or username]-dl-web]).
 4.	Click on the "Properties" tab and click on "Static website hosting".
 5.	Select the "Use this bucket to host a website" option.
 6.	In the "Index document" textbox, type index.html
@@ -156,12 +156,15 @@ apiGatewayUrl = 'https://YOUR-APIGatewayEndPoint.execute-api.us-east-1.amazonaws
 ```
 _Next, we will upload that file to S3 according to the following steps:_
 
-1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “S3” (you can find it by typing _s3_ into the search field at the top of the screen).
-2.	In your list of S3 buckets, click on the bucket you created in section 1.2, step 1.(i.e. [Your name or username]-web), and click “Upload”.
-3.	Either drag and drop your file into that space, or click “Add files” browse for the file on your computer.
-4.	Click “Upload”.
-5.	Now, in that bucket in S3, click on the file that you just uploaded, and then click “Make Public”.
-6.	Ensure that you can access your website via your browser by clicking on the link that is displayed at the bottom of the screen for that file (see screenshot above for reference).
-7.	You should see a web-page like this:
-
-![](images/Approval_page.png)
+1. Go to S3 in AWS Console at https://s3.console.aws.amazon.com/s3/home?region=us-east-1
+2. In your list of S3 buckets, click on the bucket [Your name or username]-dl-web you created above and click Upload.
+3. Click Add files and select the index.html from your computer.
+4. Under Manage public permissions, select "Grant public read access to this object(s)".
+![](images/s3public.png)
+5. Click Next, Next and upload.
+6. Replace [Your name or username]-dl-web in the URL below with the name of your S3 bucket that is hosint index.html
+```
+http://[Your name or username]-dl-web.s3-website-us-east-1.amazonaws.com
+```
+7. You should see approval page like one below:
+![](images/approvalwebsite.png)

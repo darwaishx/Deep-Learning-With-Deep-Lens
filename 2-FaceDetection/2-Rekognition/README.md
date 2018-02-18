@@ -9,36 +9,6 @@
 
 ![](images/Region.png)
 
-## 1. Create IAM Roles for API Gateway and Step Functions
-
-### 1.1 Create IAM Role for API Gateway to Step Functions
-
-_As seen in the architecture diagram, API gateway will be used to invoke the 2nd Step Function.  We need to create an IAM role to allow this to happen._
-
-1.	To access the IAM Console: In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “IAM” (you can find it by typing _iam_ into the search field at the top of the screen).
-2.	On the left-hand side of the screen, click "Roles", and then click “Create Role”.
-2.	Click “AWS service” and click “API Gateway”.
-3.	Click “Next: Permissions” (at the bottom of the screen).
-4.	Click “Next: Review” (at the bottom of the screen).
-5.	In the “Role name” text box, type _APIGatewayToStepFunctions_
-6.	Click “Create role” (at the bottom of the screen).
-7.	On the left-hand side of the screen, click "Roles", search for your role (APIGatewayToStepFunctions) and then click on that role.
-8.	On the Permissions tab, choose "Attach Policy".
-9.	On the Attach Policy page, type _step_ into the search field and click the checkbox to the left of "AWSStepFunctionsFullAccess".
-10.	Click "Attach Policy".
-
-
-### 1.2 IAM Role for Step Functions to Lambda
-
-_As seen in the architecture diagram, Step Functions will be used to invoke the PostApproval Lambda function.  We need to create an IAM role to allow this to happen._
-
-1.	In the IAM Console, on the left-hand side of the screen, click "Roles", and then click “Create Role”
-2.	Click “AWS service” and click “Step Functions”.
-3.	Click “Next: Permissions” (at the bottom of the screen).
-4.	Click “Next: Review” (at the bottom of the screen).
-5.	In the “Role name” text box, type _StepFunctionstoLambda_
-6.	Click “Create role” (at the bottom of the screen).
-
 
 ## 2. Register Your Email Address With SES
 

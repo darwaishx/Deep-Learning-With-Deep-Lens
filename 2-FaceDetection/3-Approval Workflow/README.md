@@ -1,6 +1,36 @@
 # Approval Workflow (Step Functions, API GW and Approval Website)
 
-## 1. Configure Step Functions
+## Create IAM Roles for API Gateway and Step Functions
+
+### Create IAM Role for API Gateway to Step Functions
+
+_As seen in the architecture diagram, API gateway will be used to invoke the 2nd Step Function.  We need to create an IAM role to allow this to happen._
+
+1.	To access the IAM Console: In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “IAM” (you can find it by typing _iam_ into the search field at the top of the screen).
+2.	On the left-hand side of the screen, click "Roles", and then click “Create Role”.
+2.	Click “AWS service” and click “API Gateway”.
+3.	Click “Next: Permissions” (at the bottom of the screen).
+4.	Click “Next: Review” (at the bottom of the screen).
+5.	In the “Role name” text box, type _APIGatewayToStepFunctions_
+6.	Click “Create role” (at the bottom of the screen).
+7.	On the left-hand side of the screen, click "Roles", search for your role (APIGatewayToStepFunctions) and then click on that role.
+8.	On the Permissions tab, choose "Attach Policy".
+9.	On the Attach Policy page, type _step_ into the search field and click the checkbox to the left of "AWSStepFunctionsFullAccess".
+10.	Click "Attach Policy".
+
+
+### IAM Role for Step Functions to Lambda
+
+_As seen in the architecture diagram, Step Functions will be used to invoke the PostApproval Lambda function.  We need to create an IAM role to allow this to happen._
+
+1.	In the IAM Console, on the left-hand side of the screen, click "Roles", and then click “Create Role”
+2.	Click “AWS service” and click “Step Functions”.
+3.	Click “Next: Permissions” (at the bottom of the screen).
+4.	Click “Next: Review” (at the bottom of the screen).
+5.	In the “Role name” text box, type _StepFunctionstoLambda_
+6.	Click “Create role” (at the bottom of the screen).
+
+## Configure Step Functions
 
 _We will use the AWS Step Functions service to define and control our overall workflow.  (For more information: https://aws.amazon.com/step-functions)_
 
@@ -34,7 +64,7 @@ _We will use the AWS Step Functions service to define and control our overall wo
 8.	Type ManualStep in the "Activity Name" textbox, and then click "Create Activity".
 
 
-## 2. Test Step Functions
+## Test Step Functions
 
 1.	While still in the step functions console, on the left-hand side of the screen, click “Dashboard” (see screenshot below).
 
@@ -51,7 +81,7 @@ _We will use the AWS Step Functions service to define and control our overall wo
 
 5.	Now click “Stop execution” in the top, right-hand corner of the screen.
 
-## 3. Configure API Gateway
+## Configure API Gateway
 
 1.	Save the following Swagger file to your computer: [API Gateway Swagger File](./APIGatewayToStepFunctions-respond-swagger-apigateway.yaml), open the file for editing, and substitute all instances of the string **111111111111** with your own AWS account number.
 2.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “API Gateway” (you can find it by typing api into the search field at the top of the screen).
@@ -73,7 +103,7 @@ o	Stage name: respond
 10.	Paste the invoke URL into a browser tab to ensure that the API is responding. For now it will just return an error saying “{"message":"Missing Authentication Token"}”, which is expected at this point, because the request has not gone through the expected end-to-end workflow.
 
 
-## 4. Update the Face Approval Page With the Invoke URL of API Gateway
+## Update the Face Approval Page With the Invoke URL of API Gateway
 
 1.	Edit the index.html file that you had saved on your computer in Lab 4, and replace the string **https://1o1bhkc8r9.execute-api.us-east-1.amazonaws.com/respond** with the invoke URL you noted in step 9 of section 3 above.
 2.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “S3” (you can find it by typing _s3_ into the search field at the top of the screen).
@@ -92,9 +122,9 @@ o	Stage name: respond
 _**Lab 5 Complete! [Next: Lab 6 - Bringing it All Together](../6%20-%20Bringing%20it%20All%20Together/6%20-%20Bringing%20it%20All%20Together.md)**_
 
 
-# Lab 4 - Approval Verification Website
+# Approval Verification Website
 
-## 1. Create Cognito Identity Pool
+## Create Cognito Identity Pool
 
 _Cognito will be used to assign temporary credentials for securely accessing AWS resources used in this workshop. (For more information: https://aws.amazon.com/cognito/)_
 
@@ -110,7 +140,7 @@ _Cognito will be used to assign temporary credentials for securely accessing AWS
 
 8.	Copy that into a text file because you will use it in a later step.
 
-## 2. Update the Cognito IAM Role to Allow Access to AWS Resources
+## Update the Cognito IAM Role to Allow Access to AWS Resources
 
 1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “IAM” (you can find it by typing _iam_ into the search field at the top of the screen).
 2.	On the left-hand side of the screen, click "Roles".
@@ -124,7 +154,7 @@ _Cognito will be used to assign temporary credentials for securely accessing AWS
 10.	Click “Attach policy” (at the bottom, right-hand corner of the screen).
 11.	Repeat steps 1 to 10 for the “Cognito_ML_ID_PoolAuth_Role”.
 
-## 3. Create S3 Bucket for Static Website Hosting
+## Create S3 Bucket for Static Website Hosting
 
 _We will use a static website to host a web-page that will be used for approving unrecognized faces to be added to our Rekognition collection._
 
@@ -140,7 +170,7 @@ _We will use a static website to host a web-page that will be used for approving
 7.	Click "Save".
 
 
-## 4. Create the Approval Static Web Page
+## Create the Approval Static Web Page
 
 _The document at the following link contains the HTML code for the static web page that will be used for allowing manual approval of images to be added to the Rekognition collection: [index.html](./index.html)_
 

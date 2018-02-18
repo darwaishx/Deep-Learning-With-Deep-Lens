@@ -29,7 +29,7 @@ Amazon Rekognition can store information about detected faces in server-side con
 1.	Install the AWS CLI by following the instructions at the following link: https://docs.aws.amazon.com/cli/latest/userguide/installing.html
 2.	Configure the AWS CLI by following the instructions at the following link: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 
-### Create and Manage Rekognition Collection
+### Create Rekognition Collection
 
 _Rekognition will be consulted in order to check whether a face in the image sent by DeepLens is recognized (i.e. whether it exists in our Rekognition collection)._
 
@@ -58,3 +58,6 @@ aws rekognition list-faces --collection-id "aiweek" --region us-east-1
 ```
 aws rekognition delete-faces --collection-id "dl-faces" --face-ids "FACE-ID-To-DELETE, GET FaceID FROM list-faces"
 ```
+
+## Completion
+You have successfully created a Rekognition collection and will use it in following modules to verify incoming faces from Deeplens. In the next [Approval Workflow](../3-Approval Workflow), you will learn how to build an approval workflow before sending incoming image from Deeplens to Rekognition collection.

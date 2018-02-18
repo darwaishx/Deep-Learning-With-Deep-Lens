@@ -81,14 +81,30 @@ _We will create a test event within the Lambda console._
 
 ![](images/Configure_test_event.png)
 
-4.	A set of auto-generated code will appear when you select that option.  In that code, change the key to andy.png and the bucket name to S3 buck where images from Deeplens are being stored _[YourName-dl-faces]_.
+4. A set of auto-generated code will appear when you select that option.  In that code, change the key to andy.png and the bucket name to S3 buck where images from Deeplens are being stored _[YourName-dl-faces]_.
 
 ![](images/lambdatest.png)
 
-5.	Click “Save”.
-6.	Now, in the top, right-hand corner of the console screen, click the “Test” button.
-7.	At this point you should receive an email asking you to approve the photo.  Go ahead and click the link in the email in order to verify that you can access that it brings you to the approval website.  However, note that it is not yet possible for us to approve the image.  We need to create the 2nd Lambda function for the approval process.
+5. Click “Save”.
+6. Now, in the top, right-hand corner of the console screen, click the “Test” button.
+7. At this point you should receive an email asking you to approve/reject the photo.
 
+![](images/approveemail.png)
+
+8. Go ahead and click the Approve link and that should open the approval website.
+
+![](images/approvalwebsite.png)
+
+9. Go to StepFunctions in AWS console at https://console.aws.amazon.com/states/home?region=us-east-1#/ and click on the state machine _MLApprovalProcess_
+10. You should see current execution with status "Running".
+
+![](images/statemachinerunning.png)
+
+11. Click on the arn of the execution to see more details.
+
+![](images/statemachinerunning2.png)
+
+12. Go back to the approval email and click the Reject link. It should take you to API GW and return {} if request if successful.
 
 ### Create the “PostApproval” Lambda Function
 

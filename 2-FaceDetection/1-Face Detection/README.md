@@ -195,4 +195,4 @@ _This will allow our Lambda function (created in later steps) to access our S3 b
 1. Go to S3 bucket and you should now see images coming from Deeplens
 2. Verify that you have images coming from Deeplens before continuing to next lab.
 
-[Continue to Next Lab](./2-Rekognition)
+[Continue to Next Lab](../2-Rekognition)

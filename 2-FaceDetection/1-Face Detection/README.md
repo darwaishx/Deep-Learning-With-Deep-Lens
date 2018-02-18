@@ -121,7 +121,7 @@ _This is the bucket to which cropped faces coming from DeepLens will be stored._
 
 1. Go to S3 in AWS Console at https://s3.console.aws.amazon.com/s3/home?region=us-east-1.
 2. Click "Create bucket", and enter the following details:
-*	Bucket name: _[Your name or username]-dl-bucket_
+*	Bucket name: _[Your name or username]-dl-faces_
 *	Region: US East (N. Virginia)
 3.	Click "Create".
 
@@ -153,7 +153,7 @@ _This will allow our Lambda function (created in later steps) to access our S3 b
    - Existing role*: Select the IAM role DL-Lambda-Role that you just created.
    - Click Create function.
 3. Replace code with code from [iottos3.py](iottos3.py).
-4. Update the following line with the name of your S3 bucket _[Your name or username]-dl-bucket_ that you created above to store images and click Save.
+4. Update the following line with the name of your S3 bucket _[Your name or username]-dl-faces_ that you created above to store images and click Save.
    ```
    bucket = "YOUR-S3-BUCKET-NAME"
    ```
@@ -168,7 +168,7 @@ _This will allow our Lambda function (created in later steps) to access our S3 b
    - Click Create
 6. Click on Test
 7. Your lambda function should return URL of file it just created in S3.
-8. Go to S3 bucket _[Your name or username]-dl-bucket_ and verify that you can see the file lambda function just created.
+8. Go to S3 bucket _[Your name or username]-dl-faces_ and verify that you can see the file lambda function just created.
 
 ### Create IoT Rule
 1. Using your browser, open the AWS IoT console at https://console.aws.amazon.com/iot/home?region=us-east-1#/dashboard.
@@ -192,8 +192,8 @@ _This will allow our Lambda function (created in later steps) to access our S3 b
       - Click Create rule.
 
 ### Verify Deeplens is sending faces to S3
-1. Go to S3 bucket and you should now see images coming from Deeplens
-2. Verify that you have images coming from Deeplens before continuing to next lab.
+Go to S3 bucket _[Your name or username]-dl-faces_ and you should now see images coming from Deeplens.
 
-##
+
+## Completion
 You have successfully created and deployed a face detection project on DeepLens. You also modified the default project so when DeepLens detect a human face, it will crop the face and store as image in S3. In the next [Rekognition](../2-Rekognition), you will learn how Amazon Rekognition provides Deep learning-based image and video analysis capabilities including face verification.

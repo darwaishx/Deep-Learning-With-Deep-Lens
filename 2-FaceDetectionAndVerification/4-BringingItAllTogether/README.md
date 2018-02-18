@@ -89,7 +89,7 @@ _We will create a test event within the Lambda console._
 6. Now, in the top, right-hand corner of the console screen, click the “Test” button.
 7. At this point you should receive an email asking you to approve/reject the photo.
 
-![](images/approveemail.png)
+![](images/approvalemail.png)
 
 8. Go ahead and click the Approve link and that should open the approval website.
 

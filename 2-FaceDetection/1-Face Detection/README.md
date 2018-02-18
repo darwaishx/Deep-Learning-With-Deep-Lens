@@ -152,8 +152,12 @@ _This will allow our Lambda function (created in later steps) to access our S3 b
    - Role: Choose an existing role.
    - Existing role*: Select the IAM role AI_ML_Lambda_Role that you just created.
    - Click Create function.
-3. Replace code with code from [iottos3.py](iottos3.py) and click Save.
-4. Click on drop down Select a test event... and click Configure test events
+3. Replace code with code from [iottos3.py](iottos3.py).
+4. Update the following line with the name of your S3 bucket that you created above to store images and click Save.
+   ```
+   bucket = "YOUR-S3-BUCKET-NAME"
+   ```
+5. Click on drop down Select a test event... and click Configure test events
    - Leave the defaults as Create new test event and Event template Hello World
    - Event name: Test
    - Replace JSON in the text box with JSON below:
@@ -162,9 +166,9 @@ _This will allow our Lambda function (created in later steps) to access our S3 b
    ```
    ![](images/iotlambdatestevent.png)
    - Click Create
-5. Click on Test
-6. Your lambda function should return URL of file it just created in S3.
-7. Go to S3 bucket dlworkshop-images and verify that you can see the file lambda function just created.
+6. Click on Test
+7. Your lambda function should return URL of file it just created in S3.
+8. Go to S3 bucket dlworkshop-images and verify that you can see the file lambda function just created.
 
 ### Create IoT Rule
 1. Using your browser, open the AWS IoT console at https://console.aws.amazon.com/iot/home?region=us-east-1#/dashboard.

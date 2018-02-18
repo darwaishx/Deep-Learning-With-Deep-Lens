@@ -1,5 +1,7 @@
 # Approval Workflow (Step Functions, API GW and Approval Website)
 
+In the next module you will learn how to build an approval workflow before sending incoming image from Deeplens to Rekognition collection.
+
 ## Create IAM Roles for API Gateway and Step Functions
 
 ### Create IAM Role for API Gateway to Step Functions
@@ -34,11 +36,13 @@ _As seen in the architecture diagram, Step Functions will be used to invoke the 
 
 _We will use the AWS Step Functions service to define and control our overall workflow.  (For more information: https://aws.amazon.com/step-functions)_
 
-1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “Step Functions” (you can find it by typing _step_ into the search field at the top of the screen).
-2.	Click "Get Started", and then click "Author from scratch".
-3.	For the name, type _MLApprovalProcess_ (see screenshot below).
-4.	For the IAM Role, ensure that the APIGatewayToStepFunctions role is selected.
-5.	In the "Code" section, paste the following code and **replace the strings 111111111111 with your own AWS account Number**:
+1. Go to StepFunction in AWS Console at https://console.aws.amazon.com/states/home?region=us-east-1#/
+2. In the left navigation, click "Tasks", then click "Create new activity".
+3. Type ManualStep in the "Activity Name" textbox, and then click "Create Activity".
+4. In the left navigation, click on Dashboard and click Create a state machine
+5. Choose "Author from scratch" and for the name, type _MLApprovalProcess_.
+6. For the IAM Role, choose the APIGatewayToStepFunctions role that your created above.
+7.	In the "Code" section, paste the following code and **replace the strings 111111111111 with your own AWS account Id**:
 ```{
   "Comment": "Image review process!",
   "StartAt": "ManualApproval",
@@ -58,11 +62,6 @@ _We will use the AWS Step Functions service to define and control our overall wo
 ```
 
 ![](images/Step_fns.png)
-
-6.	Click "Create State Machine" (at the bottom of the page).
-7.	On the left-hand side of the screen, click "Tasks", then click "Create new activity".
-8.	Type ManualStep in the "Activity Name" textbox, and then click "Create Activity".
-
 
 ### Test Step Functions
 

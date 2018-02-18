@@ -196,4 +196,4 @@ Go to S3 bucket _[Your name or username]-dl-faces_ and you should now see images
 
 
 ## Completion
-You have successfully created and deployed a face detection project on DeepLens. You also modified the default project so when DeepLens detects a human face, it will crop the face and store as image in S3. In the next [Rekognition](../2-Rekognition), you will learn how Amazon Rekognition provides Deep learning-based image and video analysis capabilities including face verification.
+You have successfully created and deployed a face detection project on DeepLens. You also modified the default project so when DeepLens detects a human face, it will crop the face and store as image in S3. In the next [Rekognition](../2-Rekognition), you will learn how Amazon Rekognition provides Deep learning-based image and video analysis capabilities including face verification in the cloud.

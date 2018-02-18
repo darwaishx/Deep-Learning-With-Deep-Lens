@@ -9,39 +9,14 @@
 
 ![](images/Region.png)
 
-## 1. Create IAM Roles
+## 1. Create IAM Roles for API Gateway and Step Functions
 
-### 1.1 Create IAM Role for Lambda Functions
-
-_We need to create an IAM role to allow our Lambda functions to access AWS services used in this workshop._
-
-1.	To access the IAM Console: In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “IAM” (you can find it by typing _iam_ into the search field at the top of the screen).
-2.	On the left-hand side of the screen, click "Roles", and then click “Create Role”.
-3.	Click “AWS service” and click “Lambda” (see screenshot below).
-4.	Click “Next: Permissions” (at the bottom of the screen).
-
-![](images/Lambda_IAM_Screen1.png)
-
-5.	In the Search field, type _s3_, and then select “AmazonS3FullAccess” (i.e. click the checkbox to the left of “AmazonS3FullAccess”; see screenshot below).
-
-![](images/Lambda_IAM_Screen2_Policy.png)
-
-6.	Repeat for other required services as follows…
-7.	In the Search field, type _step_, and then select “AWSStepFunctionsFullAccess”.
-8.	In the Search field, type _rek_, and then select “AmazonRekognitionFullAccess”.
-9.	In the Search field, type _dyn_, and then select “AmazonDynamoDBFullAccess”.
-10.	In the Search field, type _ses_, and then select “AmazonSESFullAccess”.
-11.	In the Search field, type _cog_, and then select “AmazonCognitoPowerUser”.
-12.	Click “Next: Review” (at the bottom of the screen).
-13.	In the “Role name” text box, type AI_ML_Lambda_Role
-14.	Click “Create role” (at the bottom of the screen).
-
-
-### 1.2 Create IAM Role for API Gateway to Step Functions
+### 1.1 Create IAM Role for API Gateway to Step Functions
 
 _As seen in the architecture diagram, API gateway will be used to invoke the 2nd Step Function.  We need to create an IAM role to allow this to happen._
 
-1.	In the IAM Console, on the left-hand side of the screen, click "Roles", and then click “Create Role”
+1.	To access the IAM Console: In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “IAM” (you can find it by typing _iam_ into the search field at the top of the screen).
+2.	On the left-hand side of the screen, click "Roles", and then click “Create Role”.
 2.	Click “AWS service” and click “API Gateway”.
 3.	Click “Next: Permissions” (at the bottom of the screen).
 4.	Click “Next: Review” (at the bottom of the screen).
@@ -53,7 +28,7 @@ _As seen in the architecture diagram, API gateway will be used to invoke the 2nd
 10.	Click "Attach Policy".
 
 
-### 1.3 IAM Role for Step Functions to Lambda
+### 1.2 IAM Role for Step Functions to Lambda
 
 _As seen in the architecture diagram, Step Functions will be used to invoke the PostApproval Lambda function.  We need to create an IAM role to allow this to happen._
 

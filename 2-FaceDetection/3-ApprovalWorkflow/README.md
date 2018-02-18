@@ -160,7 +160,9 @@ _Next, we will upload that file to S3 according to the following steps:_
 2. In your list of S3 buckets, click on the bucket [Your name or username]-dl-web you created above and click Upload.
 3. Click Add files and select the index.html from your computer.
 4. Under Manage public permissions, select "Grant public read access to this object(s)".
+
 ![](images/s3public.png)
+
 5. Click Next, Next and upload.
 6. Replace [Your name or username]-dl-web in the URL below with the name of your S3 bucket that is hosint index.html
 ```
@@ -168,3 +170,7 @@ http://[Your name or username]-dl-web.s3-website-us-east-1.amazonaws.com
 ```
 7. You should see approval page like one below:
 ![](images/approvalwebsite.png)
+
+
+## Completion
+You have successfully created state machine in StepFunction, API Gateway and approval website to manage the approval workflow for images coming from Deeplens. In the next [Bringing it All Together](../4-BringingItAllTogether), you will learn create lambda function to initiate workflow.

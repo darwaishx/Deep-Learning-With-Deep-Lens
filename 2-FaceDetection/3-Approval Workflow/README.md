@@ -124,19 +124,6 @@ _Cognito will be used to assign temporary credentials for securely accessing AWS
 10.	Click “Attach policy” (at the bottom, right-hand corner of the screen).
 11.	Repeat steps 1 to 10 for the “Cognito_ML_ID_PoolAuth_Role”.
 
-
-## Create a Bucket for Uploading Images of Faces (This section to be moved to Lab 1 or 2)
-
-_This is the bucket to which DeepLens will upload images._
-
-1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “S3” (you can find it by typing _s3_ into the search field at the top of the screen).
-2.	Click "Create bucket", and enter the following details:
-*	Bucket name: _[Your name or username]-ml-bucket_
-*	Region: US East (N. Virginia)
-3.	Click "Create".
-
-![](images/ML_Bucket.png)
-
 ## 3. Create S3 Bucket for Static Website Hosting
 
 _We will use a static website to host a web-page that will be used for approving unrecognized faces to be added to our Rekognition collection._

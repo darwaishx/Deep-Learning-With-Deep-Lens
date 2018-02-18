@@ -115,16 +115,12 @@ Next you will deploy the Face Detection project you just updated.
 
 In this section you will create resources including S3 bucket, Lambda function and IoT rule to invoke the lambda function with image data if confidence level is above 80%.
 
-### Create S3 Bucket and IAM Role
+### Create S3 Bucket
 
-_We need to create an S3 bucket that will be used for uploading images of detected faces from the DeepLens device.  We will also create a role that will allow our Lambda functions (created in later steps) to access this bucket._
+_This is the bucket to which cropped faces coming from DeepLens will be stored._
 
-#### Create a Bucket for Uploading Images of Faces
-
-_This is the bucket to which DeepLens will upload images._
-
-1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “S3” (you can find it by typing _s3_ into the search field at the top of the screen).
-2.	Click "Create bucket", and enter the following details:
+1. Go to S3 in AWS Console at https://s3.console.aws.amazon.com/s3/home?region=us-east-1.
+2. Click "Create bucket", and enter the following details:
 *	Bucket name: _[Your name or username]-ml-bucket_
 *	Region: US East (N. Virginia)
 3.	Click "Create".
@@ -135,7 +131,7 @@ _This is the bucket to which DeepLens will upload images._
 
 _ This will allow our Lambda function (created in later steps) to access our S3 bucket, and other services that will be used in later parts of this workshop._
 
-1.	To access the IAM Console: In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “IAM” (you can find it by typing _iam_ into the search field at the top of the screen).
+1. Go to IAM in AWS Console at https://console.aws.amazon.com/iam/home?region=us-east-1#/home
 2.	On the left-hand side of the screen, click "Roles", and then click “Create Role”.
 3.	Click “AWS service” and click “Lambda” (see screenshot below).
 4.	Click “Next: Permissions” (at the bottom of the screen).

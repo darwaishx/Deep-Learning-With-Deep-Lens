@@ -69,7 +69,8 @@ aws rekognition list-faces --collection-id "dl-faces" --region us-east-1
 aws rekognition search-faces-by-image --image '{"S3Object":{"Bucket":"[Your name or username]-dl-faces","Name":"andy2.png"}}' --collection-id "dl-faces" --region us-east-1
 ```
 ![](images/searchfacebyimage.png)
-7. To delete a face from your collection, use the face-id
+
+7. To delete a face from your collection, use the face-id that you get from list-faces command.
 ```
 aws rekognition delete-faces --collection-id "dl-faces" --face-ids "FACE-ID-To-DELETE, GET FaceID FROM list-faces"
 ```

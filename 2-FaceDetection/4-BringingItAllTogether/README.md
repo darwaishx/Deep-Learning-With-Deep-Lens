@@ -104,4 +104,8 @@ rekognitionCollection = 'YOUR-REKOGNITION-COLLECTION'
 ```
 6.	Click “Save”.
 
-**Time to test!!!**
+## End to End Test
+As Deeplens now detect a face, you should get an email if face already exist in your Rekognition collection. If face does not exist, you should get an email to approve/reject wheter that face should be added to your Rekognition collection.
+
+## Completion
+You have successfully build and end to end solution to detect faces using Deeples, and recognize those using Rekognition.

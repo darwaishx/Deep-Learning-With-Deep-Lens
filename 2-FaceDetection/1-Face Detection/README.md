@@ -127,7 +127,7 @@ _This is the bucket to which cropped faces coming from DeepLens will be stored._
 
 ### Create an IAM Role
 
-_ This will allow our Lambda function (created in later steps) to access our S3 bucket, and other services that will be used in later parts of this workshop._
+_This will allow our Lambda function (created in later steps) to access our S3 bucket, and other services that will be used in later parts of this workshop._
 
 1. Go to IAM in AWS Console at https://console.aws.amazon.com/iam/home?region=us-east-1#/home
 2.	On the left-hand side of the screen, click "Roles", and then click “Create Role”.

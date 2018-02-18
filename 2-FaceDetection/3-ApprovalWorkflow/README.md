@@ -66,9 +66,6 @@ _We will use the AWS Step Functions service to define and control our overall wo
 ### Test Step Functions
 
 1.	While still in the step functions console, on the left-hand side of the screen, click “Dashboard”.
-
-![](images/Test_step_fns.png)
-
 2.	Click directly on the state machine you just created (not on the radio button next to it) and then click “New execution”.
 3.	Enter a name for the execution test and then click “Start execution” (see screenshot below).
 

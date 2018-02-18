@@ -125,32 +125,24 @@ _This is the bucket to which cropped faces coming from DeepLens will be stored._
 *	Region: US East (N. Virginia)
 3.	Click "Create".
 
-![](images/ML_Bucket.png)
-
-#### Create an IAM Role
+### Create an IAM Role
 
 _ This will allow our Lambda function (created in later steps) to access our S3 bucket, and other services that will be used in later parts of this workshop._
 
 1. Go to IAM in AWS Console at https://console.aws.amazon.com/iam/home?region=us-east-1#/home
 2.	On the left-hand side of the screen, click "Roles", and then click “Create Role”.
-3.	Click “AWS service” and click “Lambda” (see screenshot below).
+3.	Click “AWS service” and click “Lambda”.
 4.	Click “Next: Permissions” (at the bottom of the screen).
-
-![](images/Lambda_IAM_Screen1.png)
-
 5.	In the Search field, type _s3_, and then select “AmazonS3FullAccess” (i.e. click the checkbox to the left of “AmazonS3FullAccess”; see screenshot below).
-
-![](images/Lambda_IAM_Screen2_Policy.png)
-
-6.	Repeat for other required services as follows…
-7.	In the Search field, type _step_, and then select “AWSStepFunctionsFullAccess”.
-8.	In the Search field, type _rek_, and then select “AmazonRekognitionFullAccess”.
-9.	In the Search field, type _dyn_, and then select “AmazonDynamoDBFullAccess”.
-10.	In the Search field, type _ses_, and then select “AmazonSESFullAccess”.
-11.	In the Search field, type _cog_, and then select “AmazonCognitoPowerUser”.
-12.	Click “Next: Review” (at the bottom of the screen).
-13.	In the “Role name” text box, type AI_ML_Lambda_Role
-14.	Click “Create role” (at the bottom of the screen).
+6.	Repeat for other required services as follows:
+   - In the Search field, type _step_, and then select “AWSStepFunctionsFullAccess”.
+   - In the Search field, type _rek_, and then select “AmazonRekognitionFullAccess”.
+   - In the Search field, type _dyn_, and then select “AmazonDynamoDBFullAccess”.
+   - In the Search field, type _ses_, and then select “AmazonSESFullAccess”.
+   - In the Search field, type _cog_, and then select “AmazonCognitoPowerUser”.
+7.	Click “Next: Review” (at the bottom of the screen).
+8.	In the “Role name” text box, type AI_ML_Lambda_Role
+9.	Click “Create role” (at the bottom of the screen).
 
 ### Create Lambda Function
 1. Using your browser, open the AWS Lambda console at https://console.aws.amazon.com/lambda/home?region=us-east-1#/.
@@ -158,8 +150,7 @@ _ This will allow our Lambda function (created in later steps) to access our S3 
    - Name: dlworkshop-iottos3.
    - Runtime: Python 3.6.
    - Role: Choose an existing role.
-   - Existing role*: Select the role you created in previous lab dlworkshop-lambda-iottos3.
-   ![](images/lambdaiottos3create.png)
+   - Existing role*: Select the IAM role AI_ML_Lambda_Role that you just created.
    - Click Create function.
 3. Replace code with code from [iottos3.py](iottos3.py) and click Save.
 4. Click on drop down Select a test event... and click Configure test events

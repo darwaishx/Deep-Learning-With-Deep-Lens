@@ -1,4 +1,4 @@
-# Bringing it All Together (Create DynamoDB Table and Lambda Functions)
+# Bringing it All Together
 
 ## Register Your Email Address With SES
 

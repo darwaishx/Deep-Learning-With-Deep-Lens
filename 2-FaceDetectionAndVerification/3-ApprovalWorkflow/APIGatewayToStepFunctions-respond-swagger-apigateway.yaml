@@ -29,8 +29,9 @@ paths:
         httpMethod: "POST"
         requestTemplates:
           application/json: "{\n   \"output\": \"{\\\"approval\\\":\\\"rejected\\\"\
-            , \\\"taskToken\\\": \\\"$input.params('taskToken')\\\"}\",\n   \n   \"\
-            taskToken\": \"$input.params('taskToken')\"\n}"
+            , \\\"ImageId\\\": \\\"$input.params('ImageId')\\\", \\\"taskToken\\\"\
+            : \\\"$input.params('taskToken')\\\"}\",\n   \n   \"taskToken\": \"$input.params('taskToken')\"\
+            \n}"
         type: "aws"
   /succeed:
     get:
@@ -58,9 +59,9 @@ paths:
         httpMethod: "POST"
         requestTemplates:
           application/json: "{\n   \"output\": \"{\\\"approval\\\":\\\"approved\\\"\
-            , \\\"name\\\": \\\"$input.params('name')\\\", \\\"taskToken\\\": \\\"\
-            $input.params('taskToken')\\\"}\",\n   \n   \"taskToken\": \"$input.params('taskToken')\"\
-            \n}"
+            , \\\"name\\\": \\\"$input.params('name')\\\", \\\"ImageId\\\": \\\"$input.params('ImageId')\\\
+            \", \\\"taskToken\\\": \\\"$input.params('taskToken')\\\"}\",\n   \n \
+            \  \"taskToken\": \"$input.params('taskToken')\"\n}"
         type: "aws"
     options:
       consumes:

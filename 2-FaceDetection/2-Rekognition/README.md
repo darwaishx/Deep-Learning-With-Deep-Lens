@@ -1,12 +1,20 @@
 
 # Rekognition (Deep learning-based image and video analysis)
 
-## Prerequisites
+## Rekognition Introduction
+1. In AWS Console go to Rekognition at https://console.aws.amazon.com/rekognition/home?region=us-east-1#/.
+2. In the left navigation click on Object and scene detection and notice how Rekognition return labels for objects and activities detected in the image.
+3. In the left navigation click on Face comparison to see how Rekognition let you compare two faces and gives a confidence score on how closely they match.
+4. You can explore other feature including Image moderation, Facial analysis, Celebrity recognition and Text in image.
+
+##Rekognition Collections
+Amazon Rekognition can store information about detected faces in server-side containers known as collections. You can use the facial information stored in a collection to search for known faces in images, stored videos and streaming videos. You will use AWS CLI to create and manage Rekognition collections.
+
+### Configure AWS CLI
 1.	Install the AWS CLI by following the instructions at the following link: https://docs.aws.amazon.com/cli/latest/userguide/installing.html
 2.	Configure the AWS CLI by following the instructions at the following link: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
-3.	Log into the AWS Console before proceeding with the steps below: https://console.aws.amazon.com
 
-## Create Rekognition Collection
+### Create and Manage Rekognition Collection
 
 _Rekognition will be consulted in order to check whether a face in the image sent by DeepLens is recognized (i.e. whether it exists in our Rekognition collection)._
 

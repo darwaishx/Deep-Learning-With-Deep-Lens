@@ -81,7 +81,10 @@ _We will create a test event within the Lambda console._
 
 ![](images/Configure_test_event.png)
 
-4.	A set of auto-generated code will appear when you select that option.  In that code, change the key to the name of the test image you uploaded to your ML bucket when you created it (see screenshot below), and change the bucket name to the name of your ML bucket.
+4.	A set of auto-generated code will appear when you select that option.  In that code, change the key to andy.png and the bucket name to S3 buck where images from Deeplens are being stored _[YourName-dl-faces]_.
+
+![](images/lambdatest.png)
+
 5.	Click “Save”.
 6.	Now, in the top, right-hand corner of the console screen, click the “Test” button.
 7.	At this point you should receive an email asking you to approve the photo.  Go ahead and click the link in the email in order to verify that you can access that it brings you to the approval website.  However, note that it is not yet possible for us to approve the image.  We need to create the 2nd Lambda function for the approval process.

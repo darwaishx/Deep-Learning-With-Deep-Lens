@@ -34,6 +34,3 @@ aws rekognition index-faces --image '{"S3Object":{"Bucket":"[Your name or userna
 ```
 aws rekognition list-faces --collection-id "aiweek" --region us-east-1
 ```
-
-
-_**Lab 3 Complete!  [Next: Lab 4 - Approval Verification Website](../4-Approval%20Verification%20Website/README.md)**_

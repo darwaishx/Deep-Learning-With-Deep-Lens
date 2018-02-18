@@ -1,6 +1,16 @@
-# Lab 6 - Bringing it All Together (Create DynamoDB Table and Lambda Functions)
+# Bringing it All Together (Create DynamoDB Table and Lambda Functions)
 
-## 1. Create DynamoDB Table
+## Register Your Email Address With SES
+
+_SES will be used to send an email from the “StartWorkflow” Lambda function we will create later in this workshop.  In order to do this, your email address must be registered with SES._
+
+1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “Simple Email Service” (you can find it by typing _ses_ into the search field at the top of the screen).
+2.	Click on “Manage Identities”
+3.	On the left-hand side of the page, click “Email Addresses”, and then click “Verify a New Email Address”.
+4.	Enter your email address and click “Verify This Email Address”.
+5.	A verification email will be sent to your email address.  Open your email and click the verification link in that email.
+
+## Create DynamoDB Table
 
 1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “DynamoDB” (you can find it by typing _dyn_ into the search field at the top of the screen).
 2.	Click "Create table", and enter the following details:
@@ -8,10 +18,9 @@
 *	Primary key: Token  
 3.	Click "Create".
 
+## Create Lambda Functions
 
-## 2. Create Lambda Functions
-
-### 2.1 Create the “StartWorkflow” Lambda Function
+### Create the “StartWorkflow” Lambda Function
 
 _This function will be the heart of the entire workflow.  It will check to see if the face in the image sent from DeepLens exists in a Rekognition collection.  If so, it will simply send an email to notify you that this person was seen by the DeepLans device. If not, it will send an email to ask if you want to approve this face and add it to your Rekognition collection._
 
@@ -55,7 +64,7 @@ e.g.
 
 17.	Click "Save" (at the top of the screen).
 
-## 2.2 Test the “StartWorkflow” Lambda Function
+### Test the “StartWorkflow” Lambda Function
 
 _We will create a test event within the Lambda console._
 
@@ -74,7 +83,7 @@ _We will create a test event within the Lambda console._
 7.	At this point you should receive an email asking you to approve the photo.  Go ahead and click the link in the email in order to verify that you can access that it brings you to the approval website.  However, note that it is not yet possible for us to approve the image.  We need to create the 2nd Lambda function for the approval process.
 
 
-## 2.3 Create the “PostApproval” Lambda Function
+### Create the “PostApproval” Lambda Function
 
 _This function will actually add the image to our Rekognition collection, so that it will be recognized on subsequent attempts._
 1.	In the AWS Console, click on “Services” in the top, left-hand corner of the screen, and click on “Lambda” (you can find it by typing _lambda_ into the search field at the top of the screen).

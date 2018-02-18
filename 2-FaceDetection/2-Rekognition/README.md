@@ -16,6 +16,8 @@ Amazon Rekognition provides Deep learning-based image and video analysis. It pro
 - Text in images
 ![](images/text.png)
 
+You will use Rekognition for face verification by saving and comparing faces stored in the collection.
+
 ## Rekognition Introduction
 1. In AWS Console go to Rekognition at https://console.aws.amazon.com/rekognition/home?region=us-east-1#/.
 2. In the left navigation click on Object and scene detection and notice how Rekognition return labels for objects and activities detected in the image.

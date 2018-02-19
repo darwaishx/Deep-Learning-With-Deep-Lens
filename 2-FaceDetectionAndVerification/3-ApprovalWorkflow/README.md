@@ -41,7 +41,7 @@ _We will use the AWS Step Functions service to define and control our overall wo
 3. Type ManualStep in the "Activity Name" textbox, and then click "Create Activity".
 4. In the left navigation, click on Dashboard and click Create a state machine
 5. Choose "Author from scratch" and for the name, type _MLApprovalProcess_.
-6. For the IAM Role, choose the APIGatewayToStepFunctions role that your created above.
+6. For the IAM Role, choose the _StepFunctionstoLambda_ role that your created above.
 7.	In the "Code" section, paste the following code and **replace the strings 111111111111 with your own AWS account Id**:
 ```{
   "Comment": "Image review process!",

@@ -50,7 +50,8 @@ Next you will deploy the Face Detection project you just created.
 
 ## View your project output
 
-1. You need mplayer to view the project output from Deeplens device. Install mplayer by using command below in the terminal window:
+1. You need mplayer to view the project output from Deeplens device. For Windows, follow the installation instructions at this link: http://www.mplayerhq.hu/design7/dload.html 
+For Mac, install mplayer by using command below in the terminal window:
 
 ```
 brew install mplayer
@@ -108,7 +109,7 @@ Next you will deploy the Face Detection project you just updated.
 1. Using your browser, open the AWS IoT console at https://console.aws.amazon.com/iot/home?region=us-east-1#/dashboard.
 2. Click on Test and enter the subscription topic for your Deeplens device which is in the format "$aws/things/deeplens_c2422202-e22f-4220-a333-9456789154f5/infer"
 3. Click on Subscribe to topic. That will take you the screen for topic where you can see all incoming messages.
-4. As Deeplens detect a face, it will crop the face and send image as json message to IoT.
+4. As Deeplens detects a face, it will crop the face and send the image as a json message to IoT.
 ![](images/faceiotoutput.png)
 
 ## Save Images from IoT messages to S3
@@ -172,15 +173,15 @@ _This will allow our Lambda function (created in later steps) to access our S3 b
 
 ### Create IoT Rule
 1. Using your browser, open the AWS IoT console at https://console.aws.amazon.com/iot/home?region=us-east-1#/dashboard.
-2. Click on Act and click Create.
-3. On Create a rule screen, complete following:
-   - Name: Enter FaceDetection
+2. Click on Act and click "Create a rule".
+3. On the Create a rule screen, complete the following:
+   - Name: FaceDetection
    ![](images/iotrulefinal01.png)
    - Attribute: face
    - Topic filter: Enter the name of IoT topic for your Deeplens device (example: $aws/things/deeplens_c1234562-ea5f-47e0-abd5-96f8123456f5/infer)
    - Condition: confidence > 0.8
    ![](images/iotrulefinal02.png)
-   - Under Set on or more actions:
+   - Under Set one or more actions:
       - Click Add action
       - Under Select an action, choose Invoke a Lambda function passing the message.
       ![](images/iotinvokelambda.png)
@@ -195,4 +196,4 @@ _This will allow our Lambda function (created in later steps) to access our S3 b
 Go to S3 bucket _[Your name or username]-dl-faces_ and you should now see images coming from Deeplens.
 
 ## Completion
-You have successfully created and deployed a face detection project on DeepLens. You also modified the default project so when DeepLens detects a human face, it will crop the face and store as image in S3. In the next [Rekognition](../2-Rekognition), you will learn how Amazon Rekognition provides Deep learning-based image and video analysis capabilities including face verification in the cloud.
+You have successfully created and deployed a face detection project on DeepLens. You also modified the default project so when DeepLens detects a human face, it will crop the face and store as image in S3. In the next activity, [Rekognition](../2-Rekognition), you will learn how Amazon Rekognition provides Deep learning-based image and video analysis capabilities including face verification in the cloud.

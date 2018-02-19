@@ -36,8 +36,8 @@ _As seen in the architecture diagram, Step Functions will be used to invoke the 
 
 _We will use the AWS Step Functions service to define and control our overall workflow.  (For more information: https://aws.amazon.com/step-functions)_
 
-1. Go to StepFunction in AWS Console at https://console.aws.amazon.com/states/home?region=us-east-1#/
-2. In the left navigation, click "Tasks", then click "Create new activity".
+1. Go to StepFunction in AWS Console at https://console.aws.amazon.com/states/home?region=us-east-1#/tasks
+2. Click create "Create new activity".
 3. Type ManualStep in the "Activity Name" textbox, and then click "Create Activity".
 4. In the left navigation, click on Dashboard and click Create a state machine
 5. Choose "Author from scratch" and for the name, type _MLApprovalProcess_.

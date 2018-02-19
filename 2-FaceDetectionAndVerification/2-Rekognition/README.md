@@ -57,7 +57,7 @@ aws rekognition list-faces --collection-id "dl-faces" --region us-east-1
 aws rekognition index-faces --image "{\"S3Object\":{\"Bucket\":\"[Your name or username]-dl-faces\",\"Name\":\"jb.jpg\"}}" --external-image-id "JB" --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
 ```
 ```
-aws rekognition index-faces --image "{\"S3Object\":{\"Bucket\":\"[Your name or username]-dl-faces\","Name\":\"andy1.jpg\"}}" --external-image-id "Andy" --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
+aws rekognition index-faces --image "{\"S3Object\":{\"Bucket\":\"[Your name or username]-dl-faces\",\"Name\":\"andy1.jpg\"}}" --external-image-id "Andy" --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
 ```
 4.	Now list the faces in your collection again and you should see JSON response with two faces in your Rekognition collection.
 ```

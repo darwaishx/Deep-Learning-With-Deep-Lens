@@ -1,4 +1,4 @@
-#Afternoon Session – Additional project ideas
+# Project Ideas
 
 - Create your own extension using any AWS service (or others). For example:
 - Analytic dashboard using Elastic Search

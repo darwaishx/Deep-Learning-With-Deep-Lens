@@ -68,7 +68,7 @@ aws rekognition list-faces --collection-id "dl-faces" --region us-east-1
 ### Search Face in Rekognition Collection
 1. We will now use andy.png as source image to search faces stored in the Rekognition collection. You should see JSON response similar to below with it finding Andy's face with 99.9% confidence level.
 ```
-aws rekognition search-faces-by-image --image "{"S3Object\":{\"Bucket\":\"[Your name or username]-dl-faces\",\"Name\":\"andy2.png\"}}" --collection-id "dl-faces" --region us-east-1
+aws rekognition search-faces-by-image --image "{\"S3Object\":{\"Bucket\":\"[Your name or username]-dl-faces\",\"Name\":\"andy2.png\"}}" --collection-id "dl-faces" --region us-east-1
 ```
 ![](images/searchfacebyimage.png)
 

@@ -93,7 +93,7 @@ _We will use the AWS Step Functions service to define and control our overall wo
 o	 Deployment stage: [New Stage]
 o	Stage name: respond
 8.	Click "Deploy".
-9.	Note the "Invoke URL" that gets created for this API.  Copy this to a text file because you will need it in a later step (see example screenshot below).
+9.	Note the "Invoke URL" that gets created for this API. Copy this to a text file because you will need it in a later step (see example screenshot below).
 
 ![](images/Invoke_url.png)
 
@@ -153,7 +153,7 @@ _The document at the following link contains the HTML code for the static web pa
 1. Copy the _[index.html](./index.html)_ file to your computer, save it as index.html, and make the following substitution:
 ```
 cognitoIdentityPoolId = 'YOUR-IdentityPoolId'
-apiGatewayUrl = 'https://YOUR-APIGatewayEndPoint.execute-api.us-east-1.amazonaws.com/respond/succeed'
+apiGatewayUrl = 'https://{YOUR-APIGatewayEndPoint}.execute-api.us-east-1.amazonaws.com/respond/succeed'
 ```
 _Next, we will upload that file to S3 according to the following steps:_
 

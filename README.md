@@ -1,4 +1,4 @@
-# Deep Learning With DeepLens and SageMaker
+# Deep Learning With DeepLens
 
 AI, Machine Learning and IoT projects are becoming ever more important for enterprises and startups alike. These advanced technologies have been the key innovation engine for businesses such as Amazon Go, Alexa, Amazon Robotics. In this one-day workshop, we will cover the scenarios of AI and IoT working together.
 

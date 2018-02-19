@@ -48,22 +48,24 @@ e.g.
 9.	Delete the existing code in that section, and replace it with the code from [startworkflow.py](startworkflow.py).
 10. Update following lines in the lambda_handler according to your environment.
 ```
- #########Update according to your environment #########################
- #API Gateway end point URL
- apiGatewayUrl = 'https://YOUR-APIGW-ENDPOINT.execute-api.us-east-1.amazonaws.com/respond/'
- #URL for S3 Hosted Approval Website
- approvalWebsiteUrl = 'http://YOUR-S3BUCKET-web.s3-website-us-east-1.amazonaws.com'
- #Rekognition Collection Name
- rekognitionCollection = 'YOUR-REKOGNITION-COLLECTION'
- #Step Function State Machine Arn
- stateMachineArn = 'arn:aws:states:us-east-1:YOUR-AWS-ACCOUNT-ID:stateMachine:MLApprovalProcess'
- #Step Function Activity Arn
- activityArn = 'arn:aws:states:us-east-1:YOUR-AWS-ACCOUND-ID:activity:ManualStep'
- #Email information
- emailSender = "YOUR-EMAIL-ADDRESS"
- emailRecipient = "YOUR-EMAIL-ADDRESS"
- emailSubject = "Approval needed for image"
- #########Update according to your environment #########################
+#########Update according to your environment #########################
+#API Gateway end point URL
+apiGatewayUrl = 'https://YOUR-APIGW-ENDPOINT.execute-api.us-east-1.amazonaws.com/respond/'
+#URL for S3 Hosted Approval Website
+approvalWebsiteUrl = 'http://YOUR-S3BUCKET-web.s3-website-us-east-1.amazonaws.com'
+#Rekognition Collection Name
+rekognitionCollection = 'YOUR-REKOGNITION-COLLECTION'
+#Step Function State Machine Arn
+stateMachineArn = 'arn:aws:states:us-east-1:YOUR-AWS-ACCOUNT-ID:stateMachine:MLApprovalProcess'
+#Step Function Activity Arn
+activityArn = 'arn:aws:states:us-east-1:YOUR-AWS-ACCOUND-ID:activity:ManualStep'
+#Email information
+emailSender = "YOUR-EMAIL-ADDRESS"
+emailRecipient = "YOUR-EMAIL-ADDRESS"
+emailSubject = "Approval needed for image"
+#DynamoDB Table
+dynamoTable = 'YOUR-DYNAMODB-TABLE'
+#########Update according to your environment #########################
  ```
 11.	Scroll down further, and in the “Basic Settings” section, set the timeout to 5 minutes.
 
@@ -120,6 +122,7 @@ _This function will actually add the image to our Rekognition collection, so tha
 5. Update line below with the name of your Rekognition collection.
 ```
 rekognitionCollection = 'YOUR-REKOGNITION-COLLECTION'
+dynamodbTableName = 'YOUR-DYNAMODB-TABLE'
 ```
 6.	Click “Save”.
 

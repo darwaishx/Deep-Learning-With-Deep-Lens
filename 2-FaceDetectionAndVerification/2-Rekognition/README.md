@@ -54,10 +54,10 @@ aws rekognition list-faces --collection-id "dl-faces" --region us-east-1
 
 3. Add both jb.jpg and andy1.jpg to Rekognition collection
 ```
-aws rekognition index-faces --image '{"S3Object":{"Bucket":"[Your name or username]-dl-faces","Name":"jb.jpg"}}' --external-image-id "JB" --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
+aws rekognition index-faces --image "{\"S3Object\":{\"Bucket\":\"[Your name or username]-dl-faces\",\"Name\":\"jb.jpg\"}}" --external-image-id "JB" --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
 ```
 ```
-aws rekognition index-faces --image '{"S3Object":{"Bucket":"[Your name or username]-dl-faces","Name":"andy1.jpg"}}' --external-image-id "Andy" --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
+aws rekognition index-faces --image "{\"S3Object\":{\"Bucket\":\"[Your name or username]-dl-faces\","Name\":\"andy1.jpg\"}}" --external-image-id "Andy" --collection-id "dl-faces" --detection-attributes "ALL" --region us-east-1
 ```
 4.	Now list the faces in your collection again and you should see JSON response with two faces in your Rekognition collection.
 ```
@@ -68,7 +68,7 @@ aws rekognition list-faces --collection-id "dl-faces" --region us-east-1
 ### Search Face in Rekognition Collection
 1. We will now use andy.png as source image to search faces stored in the Rekognition collection. You should see JSON response similar to below with it finding Andy's face with 99.9% confidence level.
 ```
-aws rekognition search-faces-by-image --image '{"S3Object":{"Bucket":"[Your name or username]-dl-faces","Name":"andy2.png"}}' --collection-id "dl-faces" --region us-east-1
+aws rekognition search-faces-by-image --image "{"S3Object\":{\"Bucket\":\"[Your name or username]-dl-faces\",\"Name\":\"andy2.png\"}}" --collection-id "dl-faces" --region us-east-1
 ```
 ![](images/searchfacebyimage.png)
 

@@ -45,7 +45,6 @@ _We will use the AWS Step Functions service to define and control our overall wo
 7.	In the "Code" section, paste the following code and **replace the strings 111111111111 with your own AWS account Id**:
 ```
 {
- {
   "Comment": "Image review process!",
   "StartAt": "ManualApproval",
   "States": {

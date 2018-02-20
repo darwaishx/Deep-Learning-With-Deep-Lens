@@ -9,7 +9,10 @@ We will provide a hands-on learning experience by build an end-to-end systems fo
 
 Basic requirement: Hands-on experience with python, and basic understanding of AWS services such as S3 and Lambda.
 
+Workshop has following labs:
+
 - [Get to know your Device](1-KnowYourDevice)
+
 
 ![](1-KnowYourDevice/assets/dlgeneral.png)
 

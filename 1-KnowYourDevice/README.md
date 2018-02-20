@@ -62,11 +62,50 @@
 
 6. Choose Next.
 7. On the Download certificate page, choose Download certificate, then choose Save File. Note where you save the certificate file because you need it later.
-8. After the certificated has been downloaded, choose Register.
+8. After the certificated has been downloaded, choose Register. You should see success message about your device registration like one below.
 
    _Important: The certificate is a .zip file. You attach it to AWS DeepLens in .zip format, so don’t unzip it. Certificates aren't reusable. You need to generate a new certificate every time you register your device._
 
 ![](assets/deviceregs1.png)
+
+### Connect Your AWS DeepLens Device
+
+1. Start your AWS DeepLens device by plugging the power cord into an outlet and the other end into the back of your device. Turn on the AWS DeepLens by pressing the On/Off button on the front of the device.
+2. On your computer, choose the SSID for your AWS DeepLens from the list of available networks. The SSID and password are on the bottom of your device.
+
+![](assets/ssid-connect.png)
+
+3. Wi-Fi light should be blinking at this time. If Wi-Fi light is not blinking, you need to reset the device using a pin and restart the device.
+4. If Wi-Fi light is blinking, connect to the wifi network of the device.
+
+### Set Up Your AWS DeepLens Device
+
+1. In a browser, open a new tab and navigate to http://192.168.0.1.
+
+2. On the Device page:
+- Connect to the network.
+   - Choose your local network, type the password, then choose Next. If you are using Ethernet to connect to AWS DeepLens, choose the Ethernet option.
+- Upload the certificate.
+   - Locate and choose the certificate that you downloaded from the AWS DeepLens console, then choose Upload certificate.
+   - The certificate is saved as a .zip file in your Downloads directory. Don't unzip the file. You attach the certificate as a .zip file.
+- Configure device access.
+   - Create a password for the device—You need this password to access and update your AWS DeepLens.
+   - SSH server—We recommend disabling SSH. SSH allows you to log in without using the AWS DeepLens console.
+   - Automatic updates—We recommend enabling this option. Enabling automatic updates keeps your device's software up-to-date.
+- Review the settings and finish setting up the device.
+   - To modify settings, choose Edit for the setting that you want to change.
+3. Choose Finish.
+
+### Verify That Your AWS DeepLens Is Connected
+
+After you set up your device, your computer automatically connects to the internet. This can take a few seconds. When your device is connected, you see the following message:
+
+After the connection is established, you can return to the AWS DeepLens console. You are now ready to deploy an AWS DeepLens project. For more information, see Creating and Deploying an AWS DeepLens Sample Project.
+
+![](assets/device-verified)
+
+If you fail to establish a connection, return to Connect AWS DeepLens to the Network and repeat the steps for setting up your device and connecting it to the network.
+
 
 # Editing a model in Amazon SageMaker
 

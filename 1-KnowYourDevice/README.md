@@ -23,7 +23,7 @@ The AWS DeepLens camera includes the following:
 The AWS DeepLens camera is powered by an Intel® Atomprocessor, which can process 100 billion floating-point operations per second (GFLOPS). This gives you all of the compute power that you need to perform inference on your device. The micro HDMI display port, audio out, and USB ports allow you to attach peripherals, so you can get creative with your computer vision applications.
 
 ## Supported Frameworks
-Currently, AWS DeepLens supports only the Apache MXNet framework.
+- Apache MXNet framework.
 
 ## How DeepLens Work
 

@@ -10,5 +10,5 @@ We will provide a hands-on learning experience by build an end-to-end systems fo
 Basic requirement: Hands-on experience with python, and basic understanding of AWS services such as S3 and Lambda.
 
 - [Get to know your Device](1-KnowYourDevice/README.md)
-- [End-to-end solution for face detection, recognition and verification](2-FaceDetection/README.md)
+- [End-to-end solution for face detection, recognition and verification](2-FaceDetectionAndVerification/README.md)
 - [Additional project ideas](3-ProjectIdeas/README.md)

@@ -32,7 +32,7 @@ In this exercise, you will learn to:
 7. Click "Create notebook instance".
 8. Verify that your instance's status changes to InService.
 
-![image.png](https://raw.githubusercontent.com/aws-samples/reinvent-2017-deeplens-workshop/master/lab%20session%203/assets/1.png?token=AKs8xvmYa6FaKJhnRIeFYthghNhNIDAJks5aKA1OwA%3D%3D)
+![](assets/sagemaker.png)
 
 ### Open Notebook instance
 

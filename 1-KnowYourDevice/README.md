@@ -4,5 +4,5 @@
 - Creating a DeepLens project using the object detection template.
 - Deploying model to the device.
 - Checking the output on the video stream.
-- Train a model on SageMaker
+- Edit a pre-trained object recognition model in SageMaker to perform a binary classification
 - Deploying newly trained model to the device

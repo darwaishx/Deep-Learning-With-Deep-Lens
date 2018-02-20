@@ -29,6 +29,10 @@ Currently, AWS DeepLens supports only the Apache MXNet framework. For more infor
 
 ![](assets/dlgeneral.png)
 
+## Learning Objectives of This Lab
+
+In this lab you will learn the following:
+
 - Registering your Deeplens device.
 - Creating a DeepLens project using the object detection template.
 - Deploying model to the device.

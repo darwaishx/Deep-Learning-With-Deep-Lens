@@ -25,4 +25,4 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
 ### 01:00 PM - 01:45 PM
 Sage Maker with Guy Ernest
 ### 01:45 PM - 03:00 PM
-[Additional project ideas](3-ProjectIdeas)
+[Additional project ideas/Hackathon](3-ProjectIdeas)

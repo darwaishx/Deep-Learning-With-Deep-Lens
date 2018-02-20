@@ -1,4 +1,4 @@
-# Hot Dog Not Hot Dog
+# Hot Dog Or Not Hot Dog
 
 In this module you will learn to edit a pre-trained object recognition model to perform a binary classification to classify an object as either a Hotdog or Not Hotdog. This fun exercise is based on a popular sitcom and demonstrates the extensibility of AWS DeepLens. We will edit the model in Amazon SageMaker. Amazon SageMaker is an end to end machine learning platform to train and host your models to production.
 

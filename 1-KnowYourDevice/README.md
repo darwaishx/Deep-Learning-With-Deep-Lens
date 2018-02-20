@@ -90,8 +90,8 @@
    - The certificate is saved as a .zip file in your Downloads directory. Don't unzip the file. You attach the certificate as a .zip file.
 - Configure device access.
    - Create a password for the device—You need this password to access and update your AWS DeepLens.
-   - SSH server—We recommend disabling SSH. SSH allows you to log in without using the AWS DeepLens console.
-   - Automatic updates—We recommend enabling this option. Enabling automatic updates keeps your device's software up-to-date.
+   - SSH server— Enable SSH as in the lab you will use SSH to connect to the device in later modules. SSH allows you to log in without using the AWS DeepLens console.
+   - Automatic updates— Enable this option. Enabling automatic updates keeps your device's software up-to-date.
 - Review the settings and finish setting up the device.
    - To modify settings, choose Edit for the setting that you want to change.
 3. Choose Finish.
@@ -102,7 +102,7 @@ After you set up your device, your computer automatically connects to the intern
 
 After the connection is established, you can return to the AWS DeepLens console. You are now ready to deploy an AWS DeepLens project. For more information, see Creating and Deploying an AWS DeepLens Sample Project.
 
-![](assets/device-verified)
+![](assets/device-verified.png)
 
 If you fail to establish a connection, return to Connect AWS DeepLens to the Network and repeat the steps for setting up your device and connecting it to the network.
 

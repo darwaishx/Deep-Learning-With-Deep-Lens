@@ -66,7 +66,7 @@
 
    _Important: The certificate is a .zip file. You attach it to AWS DeepLens in .zip format, so don’t unzip it. Certificates aren't reusable. You need to generate a new certificate every time you register your device._
 
-![](,/assets/deviceregs1.png)
+![](assets/deviceregs1.png)
 
 # Editing a model in Amazon SageMaker
 

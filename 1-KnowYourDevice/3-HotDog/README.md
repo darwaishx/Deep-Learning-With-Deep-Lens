@@ -48,7 +48,7 @@ In this exercise, you will learn to:
 1. Read through the notebook.
 2. Execute each cell by using the play button on the navigation bar or using shift+ enter or cmd + enter
 
-![image.png](https://raw.githubusercontent.com/aws-samples/reinvent-2017-deeplens-workshop/master/lab%20session%203/assets/2.png?token=AKs8xt7roxuqN3uel75y9ZGA8cBW5Jgtks5aKB3cwA%3D%3D)
+![](assets/notebookexecute.png)
 
 3. This will result in the json and params files being uploaded to your S3 bucket (it takes a couple of minutes for the json and params file to be created).
 4. The executions have completedf when you see the following output at the end:

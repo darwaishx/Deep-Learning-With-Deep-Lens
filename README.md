@@ -11,7 +11,7 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
 
 - [Get to know your Device](1-KnowYourDevice)
 
-![](1/KnowYourDevice/assets/dlgeneral.png)
+![](1-KnowYourDevice/assets/dlgeneral.png)
 
 - [End-to-end solution for face detection, recognition and verification](2-FaceDetectionAndVerification)
 

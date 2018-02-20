@@ -11,14 +11,15 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
 
 ## Agenda
 
-- 09:00 AM - 11:00 AM ----------- [Get to know your Device](1-KnowYourDevice)
+### 09:00 AM - 11:00 AM
+[Get to know your Device](1-KnowYourDevice)
    - Register you DeepLens device
    - Object detection with DeepLens
    - Hot Dog or Not Hog Dog - Edit a pre-trained model in SageMaker and deploy on DeepLens
-- 11:00 AM - 01:00 PM ----------- [End-to-end solution for face detection, recognition and verification](2-FaceDetectionAndVerification)
+### 11:00 AM - 01:00 PM ----------- [End-to-end solution for face detection, recognition and verification](2-FaceDetectionAndVerification)
    - Face detection with DeepLens
    - Rekognition
    - Approval Workflow
    - Bring it all together
-- 01:00 PM - 01:45 PM ----------- Sage Maker with Guy Ernest
-- 01:45 PM - 03:00 PM ----------- [Additional project ideas](3-ProjectIdeas)
+### 01:00 PM - 01:45 PM ----------- Sage Maker with Guy Ernest
+### 01:45 PM - 03:00 PM ----------- [Additional project ideas](3-ProjectIdeas)

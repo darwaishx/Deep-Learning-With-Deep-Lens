@@ -83,7 +83,7 @@ _We will create a test event within the Lambda console._
 
 ![](images/Configure_test_event.png)
 
-4. A set of auto-generated code will appear when you select that option.  In that code, change the key to andy.png and the bucket name to S3 buck where images from Deeplens are being stored _[YourName-dl-faces]_.
+4. A set of auto-generated code will appear when you select that option.  In that code, change the key to andy2.png and the bucket name to S3 buck where images from Deeplens are being stored _[YourName-dl-faces]_.
 
 ![](images/lambdatest.png)
 

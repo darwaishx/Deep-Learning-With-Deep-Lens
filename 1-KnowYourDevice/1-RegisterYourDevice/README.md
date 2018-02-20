@@ -95,3 +95,6 @@ After the connection is established, you can return to the AWS DeepLens console.
 ![](assets/device-verified.png)
 
 If you fail to establish a connection, return to Connect AWS DeepLens to the Network and repeat the steps for setting up your device and connecting it to the network.
+
+## Completion
+You have successfully registered your Deeplens device. In the next module, [Object Detection](../2-ObjectDetection), you will learn how to deploy an object detection project to Deeplens and view its output.

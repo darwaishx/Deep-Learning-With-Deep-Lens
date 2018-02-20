@@ -51,7 +51,7 @@ In this exercise, you will learn to:
 ![](assets/notebookexecute.png)
 
 3. This will result in the json and params files being uploaded to your S3 bucket (it takes a couple of minutes for the json and params file to be created).
-4. The executions have completedf when you see the following output at the end:
+4. The executions have completed when you see the following output at the end:
 
 ```
  s3.Object(bucket_name='deeplens-sagemaker-your-full-name', key='test/hotdog_or_not_model-0000.params')

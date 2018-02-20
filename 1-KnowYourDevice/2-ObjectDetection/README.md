@@ -66,3 +66,6 @@ Example:
 ```
 ssh aws_cam@192.168.86.120 cat /tmp/results.mjpeg | mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 -
 ```
+
+## Completion
+You have create and deployed object detection project to your Deeplens device. In the next module, [Hot Dog Not Hot Dog](../2-HotDogNotHotDog), you will learn how to edit a pre-trained object recognition model in SageMaker to perform a binary classification and deploy newly trained model to the device.

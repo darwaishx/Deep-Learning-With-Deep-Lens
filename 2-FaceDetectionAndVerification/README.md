@@ -8,7 +8,7 @@
 
 ![](Architecture.png)
 
-This lab has following 4 modules:
+This lab has following modules:
 - [1-Face Detection](1-FaceDetection)
 - [2-Rekognition](2-Rekognition)
 - [3-ApprovalWorkflow](3-ApprovalWorkflow)

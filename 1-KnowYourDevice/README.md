@@ -42,6 +42,8 @@ In this lab you will learn the following:
 
 ## Modules
 
-![Register Your Device](1-RegisterYourDevice)
-![Object Detection](2-ObjectDetection)
-![Hot Dog Or Not Hot Dog](3-HotDogNotHotDog)
+This lab has following modules:
+
+- [Register Your Device](1-RegisterYourDevice)
+- [Object Detection](2-ObjectDetection)
+- [Hot Dog Or Not Hot Dog](3-HotDogNotHotDog)

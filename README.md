@@ -13,5 +13,5 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
 
 - 09:00 AM - 11:00 AM ----------- [Get to know your Device](1-KnowYourDevice)
 - 11:00 AM - 01:00 PM ----------- [End-to-end solution for face detection, recognition and verification](2-FaceDetectionAndVerification)
-- 01:00 PM - 01:45 PM ----------- Sage Maker
+- 01:00 PM - 01:45 PM ----------- Sage Maker with Guy Ernest
 - 01:45 PM - 03:00 PM ----------- [Additional project ideas](3-ProjectIdeas)

@@ -4,7 +4,9 @@ AWS DeepLens is a wireless video camera and API. It shows you how to use the lat
 
 The AWS DeepLens camera, or device, uses deep convolutional neural networks (CNNs) to analyze visual imagery. You use the device as a development environment to build computer vision applications.
 
-AWS DeepLens works with the following AWS services:
+![](assets/dlgeneral.png)
+
+AWS DeepLens support Apache MXNet framework. You can also use other AWS services with DeepLens including:
 - Amazon SageMaker, for model training and validation
 - AWS Lambda, for running inference against CNN models
 - AWS Greengrass, for deploying updates and functions to your device
@@ -24,10 +26,6 @@ The AWS DeepLens camera is powered by an Intel® Atomprocessor, which can proces
 
 ## Supported Frameworks
 - Apache MXNet framework.
-
-## How DeepLens Work
-
-![](assets/dlgeneral.png)
 
 ## Learning Objectives of This Lab
 

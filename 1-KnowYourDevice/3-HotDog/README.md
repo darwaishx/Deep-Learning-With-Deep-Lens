@@ -38,7 +38,7 @@ In this exercise, you will learn to:
 
 1. Choose the notebook instance and click on Open
 2. The Jupyter notebook instance will open.
-3. Download the deeplens-hotdog-or-not-hotdog.ipynb notebook from https://github.com/aws-samples/reinvent-2017-deeplens-workshop/blob/master/lab%20session%203/deeplens-hotdog-or-not-hotdog.ipynb.
+3. Download the [hotdog-not-hotdog.ipynb](hotdog-not-hotdog.ipynb) notebook.
 4. Open the file in a text editor and search for the string "your s3 bucket name here".  Replace that string with the name of the S3 bucket you created in the previous section.
 5. Upload it to the notebook instance by choosing the Upload option.
 6. Once uploaded, click on the notebook to launch it.

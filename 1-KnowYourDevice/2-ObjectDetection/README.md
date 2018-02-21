@@ -67,5 +67,21 @@ Example:
 ssh aws_cam@192.168.86.120 cat /tmp/results.mjpeg | mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 -
 ```
 
+## View your project log messages in IoT
+
+You can also view the log messages that your project's Lambda function running on DeepLens device sends to IoT topic.
+
+1. Go to DeepLens in AWS console and then Devices at https://console.aws.amazon.com/deeplens/home?region=us-east-1#devices
+2. Click on the name of your DeepLens device and on the next screen note the IoT topic under Device settings.
+
+![](assets/dliottopic.png)
+
+3. Go to IoT in AWS Console at https://console.aws.amazon.com/iot/home?region=us-east-1#/dashboard
+4. Click on Test in the left navigation.
+5. Enter the IoT topic in the textbox under Subscription topic and click Subscribe to topic
+6. You should now see log messages published from DeepLens device to IoT.
+
+![](assets/dlmessages.png)
+
 ## Completion
 You have create and deployed object detection project to your Deeplens device. In the next module, [Hot Dog Not Hot Dog](../3-HotDogNotHotDog), you will learn how to edit a pre-trained object recognition model in SageMaker to perform a binary classification and deploy newly trained model to the device.

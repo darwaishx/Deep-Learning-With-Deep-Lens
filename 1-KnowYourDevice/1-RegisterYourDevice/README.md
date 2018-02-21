@@ -108,5 +108,16 @@ If you fail to establish a connection, return to Connect AWS DeepLens to the Net
 
 ![](assets/deviceip.png)
 
+5. You should now be able to SSH into the DeepLens Device
+
+```
+ssh aws_cam@IP-ADDRESS-OF-YOUR-DEEPLENS-DEVICE
+```
+```
+Example: ssh aws_cam@10.0.1.3
+```
+
+![](assets/ssh.png)
+
 ## Completion
 You have successfully registered your Deeplens device. In the next module, [Object Detection](../2-ObjectDetection), you will learn how to deploy an object detection project to Deeplens and view its output.

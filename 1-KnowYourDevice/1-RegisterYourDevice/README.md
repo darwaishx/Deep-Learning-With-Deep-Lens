@@ -74,7 +74,7 @@
 
 2. On the Device page:
 - Connect to the network.
-   - Choose your local network, type the password, then choose Next. If you are using Ethernet to connect to AWS DeepLens, choose the Ethernet option.
+   - For this lab we will be using Ethernet so do not choose Wi-Fi. Choose the Ethernet option and then choose Next.
 - Upload the certificate.
    - Locate and choose the certificate that you downloaded from the AWS DeepLens console, then choose Upload certificate.
    - The certificate is saved as a .zip file in your Downloads directory. Don't unzip the file. You attach the certificate as a .zip file.

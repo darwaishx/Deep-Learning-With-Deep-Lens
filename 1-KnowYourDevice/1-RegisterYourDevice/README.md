@@ -96,5 +96,17 @@ After the connection is established, you can return to the AWS DeepLens console.
 
 If you fail to establish a connection, return to Connect AWS DeepLens to the Network and repeat the steps for setting up your device and connecting it to the network.
 
+## Get the IP of your DeepLens device
+
+1. Go to IoT in AWS Console at https://console.aws.amazon.com/iot/home?region=us-east-1#/dashboard
+2. In the left navigation, click on Greengrass then click on Cores.
+3. Click on the Greengrass core that starts with deeplens_.
+
+![](assets/ggcore.png)
+
+4. On Greengrass core details screen, click on Connectivity and note the IP address of your DeepLens device.
+
+![](assets/deviceip.png)
+
 ## Completion
 You have successfully registered your Deeplens device. In the next module, [Object Detection](../2-ObjectDetection), you will learn how to deploy an object detection project to Deeplens and view its output.

@@ -6,36 +6,37 @@
 
 ![](assets/namedevice.png)
 
-4. If this is your first time registering an AWS DeepLens device, create the following AWS Identity and Access Management (IAM) roles. They give AWS DeepLens the permissions it needs to perform tasks on your behalf. If you have already created these roles, skip to step 7.
+4. If this is your first time registering an AWS DeepLens device, create the following AWS Identity and Access Management (IAM) roles. They give AWS DeepLens the permissions it needs to perform tasks on your behalf. If you have already created these roles, skip to step 5. Use CloudFormation or manual steps below to create required IAM roles.
 
-_You can either follow Step 5 to automatically create IAM roles using CloudFormation or follow Step 6 to for manual steps to create required IAM roles._
+  <details>
+    <summary>Step to use CloudFormation to automatically create required IAM roles for DeepLens</summary>
 
-5. Use CloudFormation Template to automatically create required IAM roles:
+      - [Click to launch CloudFormation Template ](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=DeepLensRoles&templateURL=https://s3.amazonaws.com/deep-learning-with-deeplens/DeepLensRoles.json)
 
-- [Click to launch CloudFormation Template ](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=DeepLensRoles&templateURL=https://s3.amazonaws.com/deep-learning-with-deeplens/DeepLensRoles.json)
+      ![](assets/createstack.png)
 
-![](assets/createstack.png)
+      - Select the checkbox "I acknowledge that AWS CloudFormation might create IAM resources with custom names." and click Create.
 
-- Select the checkbox "I acknowledge that AWS CloudFormation might create IAM resources with custom names." and click Create.
+      ![](assets/createstack2.png)
 
-![](assets/createstack2.png)
+      - Wait for few seconds and refresh the screen to find that status is CREATE_COMPLETE.
 
-- Wait for few seconds and refresh the screen to find that status is CREATE_COMPLETE.
+      ![](assets/createstack3.png)
 
-![](assets/createstack3.png)
+      - Go to https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks and select the checkbox next to stack DeepLensRoles.
 
-- Go to https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks and select the checkbox next to stack DeepLensRoles.
+      - Click on Resources tab and you should see five IAM roles that CloudFormation template created.
 
-- Click on Resources tab and you should see five IAM roles that CloudFormation template created.
+      ![](assets/createstack3.png)
 
-![](assets/createstack3.png)
+      - You can now move to step 7. Step 6 shows how you can create these IAM roles manually from AWS IAM console.
 
-- You can now move to step 7. Step 6 shows how you can create these IAM roles manually from AWS IAM console.
-
-6. Create required IAM roles manually: _Only use this step if you did not use the CloudFormation template above to automatically create required IAM roles for DeepLens. Otherwise, move to step 7._
+  </details>
 
   <details>
     <summary>Manual steps to create IAM roles for DeepLens</summary>
+
+    _Only use this step if you did not use the CloudFormation template above to automatically create required IAM roles for DeepLens. Otherwise, move to step 7._
 
     - IAM role for AWS DeepLens
        - From the list, choose AWSDeepLensServiceRole. If AWSDeepLensServiceRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
@@ -74,7 +75,7 @@ _You can either follow Step 5 to automatically create IAM roles using CloudForma
   </details>
 
 
-7. In AWS DeepLens, on the Set permissions page, choose Refresh IAM roles, then do the following:
+5. In AWS DeepLens, on the Set permissions page, choose Refresh IAM roles, then do the following:
    - For IAM role for AWS DeepLens, choose AWSDeepLensServiceRole.
    - For IAM role for AWS Greengrass service, choose AWSDeepLensGreengrassRole.
    - For IAM role for AWS Greengrass device groups, choose AWSDeepLensGreegrassGroupRole.
@@ -85,9 +86,9 @@ _You can either follow Step 5 to automatically create IAM roles using CloudForma
 
    If any of the lists do not have the specified role, find that role in step 4, follow the directions to create the role, choose Refresh IAM roles, and return to where you were in step 5.
 
-8. Choose Next.
-9. On the Download certificate page, choose Download certificate, then choose Save File. Note where you save the certificate file because you need it later.
-10. After the certificated has been downloaded, choose Register. You should see success message about your device registration like one below.
+6. Choose Next.
+7. On the Download certificate page, choose Download certificate, then choose Save File. Note where you save the certificate file because you need it later.
+8. After the certificated has been downloaded, choose Register. You should see success message about your device registration like one below.
 
    _Important: The certificate is a .zip file. You attach it to AWS DeepLens in .zip format, so don’t unzip it. Certificates aren't reusable. You need to generate a new certificate every time you register your device._
 

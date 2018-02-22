@@ -4,6 +4,33 @@
 2. Choose Register device.
 3. For Device name, type a name for your AWS DeepLens, then choose Next. Use only alphanumeric characters and dashes (-).
 4. If this is your first time registering an AWS DeepLens device, create the following AWS Identity and Access Management (IAM) roles. They give AWS DeepLens the permissions it needs to perform tasks on your behalf. If you have already created these roles, skip to step 5.
+
+
+You can either use the manual steps below to create required IAM roles. Or run the
+
+### 4.a Use CloudFormation Template to automatically create required IAM roles:
+- [Click to launch CloudFormation Template ](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=DeepLensRoles&templateURL=https://s3.amazonaws.com/deep-learning-with-deeplens/DeepLensRoles.json)
+
+![](assets/createstack.png)
+
+- Select the checkbox "I acknowledge that AWS CloudFormation might create IAM resources with custom names." and click Create
+
+![](assets/createstack2.png)
+
+- Wait for few seconds and refresh the screen to find that status is CREATE_COMPLETE.
+
+![](assets/createstack3.png)
+
+- Go to https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks and select the checkbox next to stack DeepLensRoles
+
+- Click on Resources tab and you should see five IAM roles that CloudFormationTemplate created.
+
+![](assets/createstack3.png)
+
+- You can now move to step 5. Step 4b shows how you can create these IAM roles manually from AWS IAM console.
+
+### 4.b Create required IAM roles manually:
+
 - IAM role for AWS DeepLens
    - From the list, choose AWSDeepLensServiceRole. If AWSDeepLensServiceRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
    - Accept the DeepLens service and DeepLens use case by choosing Next: Permissions.
@@ -48,7 +75,7 @@
 
    _Important, Attach the roles exactly as described. Otherwise, you might have trouble deploying models to AWS DeepLens._
 
-   If any of the lists do not have the speified role, find that role in step 4, follow the directions to create the role, choose Refresh IAM roles, and return to where you were in step 5.
+   If any of the lists do not have the specified role, find that role in step 4, follow the directions to create the role, choose Refresh IAM roles, and return to where you were in step 5.
 
 6. Choose Next.
 7. On the Download certificate page, choose Download certificate, then choose Save File. Note where you save the certificate file because you need it later.

@@ -8,7 +8,7 @@
 
 4. If this is your first time registering an AWS DeepLens device, create the following AWS Identity and Access Management (IAM) roles. They give AWS DeepLens the permissions it needs to perform tasks on your behalf. If you have already created these roles, skip to step 7.
 
-You can either follow Step 5 to automatically create IAM roles using CloudFormation or follow Step 6 to for manual steps to create required IAM roles.
+_You can either follow Step 5 to automatically create IAM roles using CloudFormation or follow Step 6 to for manual steps to create required IAM roles._
 
 5. Use CloudFormation Template to automatically create required IAM roles:
 

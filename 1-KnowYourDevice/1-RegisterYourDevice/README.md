@@ -128,7 +128,7 @@ _You can either follow Step 5 to automatically create IAM roles using CloudForma
      - You do not need to edit Device access. Just make sure that SSH is enabled under Device access.
 
      ![](assets/certificate.png)
-   <details>
+   </details>
 
    <details>
      <summary>Setup new device</summary>

@@ -3,6 +3,9 @@
 1. Sign in to the AWS Management Console and open the AWS DeepLens console at https://console.aws.amazon.com/deeplens/home?region=us-east-1#firstrun.
 2. Choose Register device.
 3. For Device name, type a name for your AWS DeepLens, then choose Next. Use only alphanumeric characters and dashes (-).
+
+![](assets/namedevice.png)
+
 4. If this is your first time registering an AWS DeepLens device, create the following AWS Identity and Access Management (IAM) roles. They give AWS DeepLens the permissions it needs to perform tasks on your behalf. If you have already created these roles, skip to step 7.
 
 You can either follow Step 5 to automatically create IAM roles using CloudFormation or follow Step 6 to for manual steps to create required IAM roles.

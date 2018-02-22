@@ -30,6 +30,11 @@ You can either Step 4a to automatically create IAM roles using CloudFormation or
 
 ### 4.b Create required IAM roles manually:
 
+<details>
+  <summary>Click to expand</summary>
+  whatever
+</details>
+
 Only use this step if you did not use the CloudFormation template above to automatically create required IAM roles for DeepLens.
 
 - IAM role for AWS DeepLens

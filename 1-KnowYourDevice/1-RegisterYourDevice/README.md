@@ -104,36 +104,47 @@ You can either follow Step 5 to automatically create IAM roles using CloudFormat
 
 1. In a browser, open a new tab and navigate to http://192.168.0.1.
 
-2. If you see Device Setup summary like below, this device was previously configured and you still need to update Network connection and Certificate settings.
+2. If you see Device Setup summary like below then follow "Edit pre-configured device" otherwise follow "Setup new device",
 
 ![](assets/setupsummary.png)
 
-   - For Network Connection, click on Edit
-   - Under Connect to network, Click on Use Ethernet. _Do not use Wi-Fi._
+   <details>
+     <summary>Edit Pre-configured device</summary>
 
-   ![](assets/networkedit.png)
+     - For Network Connection, click on Edit
+     - Under Connect to network, Click on Use Ethernet. _Do not use Wi-Fi._
 
-   - For Certificate, click on Edit
-   - Click Browse and select the certificate you downloaded during DeepLens registration and click Save.
-   _Even if you see certificate.zip already populated, make sure you still browse and select certificate you downloaded during DeepLens registration._
+     ![](assets/networkedit.png)
 
-   ![](assets/certificate.png)
+     - For Certificate, click on Edit
+     - Click Browse and select the certificate you downloaded during DeepLens registration and click Save.
+     _Even if you see certificate.zip already populated, make sure you still browse and select certificate you downloaded during DeepLens registration._
 
+     ![](assets/certificate.png)
 
+     - You do not need to edit Device access. Just make sure that SSH is enabled under Device access.
 
-2. On the Device page:
-- Connect to the network.
-   - For this lab we will be using Ethernet so do not choose Wi-Fi. Choose the Ethernet option and then choose Next.
-- Upload the certificate.
-   - Locate and choose the certificate that you downloaded from the AWS DeepLens console, then choose Upload certificate.
-   - The certificate is saved as a .zip file in your Downloads directory. Don't unzip the file. You attach the certificate as a .zip file.
-- Configure device access.
-   - Create a password for the device—You need this password to access and update your AWS DeepLens.
-   - SSH server— Enable SSH as in the lab you will use SSH to connect to the device in later modules. SSH allows you to log in without using the AWS DeepLens console.
-   - Automatic updates— Enable this option. Enabling automatic updates keeps your device's software up-to-date.
-- Review the settings and finish setting up the device.
-   - To modify settings, choose Edit for the setting that you want to change.
-3. Choose Finish.
+     ![](assets/certificate.png)
+   <details>
+
+   <details>
+     <summary>Setup new device</summary>
+
+     On the Device page:
+     - Connect to the network.
+        - For this lab we will be using Ethernet so do not choose Wi-Fi. Choose the Ethernet option and then choose Next.
+     - Upload the certificate.
+        - Locate and choose the certificate that you downloaded from the AWS DeepLens console, then choose Upload certificate.
+        - The certificate is saved as a .zip file in your Downloads directory. Don't unzip the file. You attach the certificate as a .zip file.
+     - Configure device access.
+        - Create a password for the device—You need this password to access and update your AWS DeepLens.
+        - SSH server— Enable SSH as in the lab you will use SSH to connect to the device in later modules. SSH allows you to log in without using the AWS DeepLens console.
+        - Automatic updates— Enable this option. Enabling automatic updates keeps your device's software up-to-date.
+     - Review the settings and finish setting up the device.
+        - To modify settings, choose Edit for the setting that you want to change.     
+   </details>
+
+   - Click Finish.
 
 ## Verify That Your AWS DeepLens Is Connected
 

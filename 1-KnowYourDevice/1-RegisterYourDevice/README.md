@@ -3,11 +3,12 @@
 1. Sign in to the AWS Management Console and open the AWS DeepLens console at https://console.aws.amazon.com/deeplens/home?region=us-east-1#firstrun.
 2. Choose Register device.
 3. For Device name, type a name for your AWS DeepLens, then choose Next. Use only alphanumeric characters and dashes (-).
-4. If this is your first time registering an AWS DeepLens device, create the following AWS Identity and Access Management (IAM) roles. They give AWS DeepLens the permissions it needs to perform tasks on your behalf. If you have already created these roles, skip to step 5.
+4. If this is your first time registering an AWS DeepLens device, create the following AWS Identity and Access Management (IAM) roles. They give AWS DeepLens the permissions it needs to perform tasks on your behalf. If you have already created these roles, skip to step 7.
 
-You can either Step 4a to automatically create IAM roles using CloudFormation or follow Step 4b to for manual steps to create required IAM roles.
+You can either follow Step 5 to automatically create IAM roles using CloudFormation or follow Step 6 to for manual steps to create required IAM roles.
 
-4a. Use CloudFormation Template to automatically create required IAM roles:
+5. Use CloudFormation Template to automatically create required IAM roles:
+
 - [Click to launch CloudFormation Template ](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=DeepLensRoles&templateURL=https://s3.amazonaws.com/deep-learning-with-deeplens/DeepLensRoles.json)
 
 ![](assets/createstack.png)
@@ -28,11 +29,12 @@ You can either Step 4a to automatically create IAM roles using CloudFormation or
 
 - You can now move to step 5. Step 4b shows how you can create these IAM roles manually from AWS IAM console.
 
-4.b Create required IAM roles manually:
+6. Create required IAM roles manually:
+
+Only use this step if you did not use the CloudFormation template above to automatically create required IAM roles for DeepLens.
 
 <details>
   <summary>Click for steps to manually creating IAM roles for DeepLens</summary>
-  Only use this step if you did not use the CloudFormation template above to automatically create required IAM roles for DeepLens.
 
   - IAM role for AWS DeepLens
      - From the list, choose AWSDeepLensServiceRole. If AWSDeepLensServiceRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
@@ -82,9 +84,9 @@ You can either Step 4a to automatically create IAM roles using CloudFormation or
 
    If any of the lists do not have the specified role, find that role in step 4, follow the directions to create the role, choose Refresh IAM roles, and return to where you were in step 5.
 
-6. Choose Next.
-7. On the Download certificate page, choose Download certificate, then choose Save File. Note where you save the certificate file because you need it later.
-8. After the certificated has been downloaded, choose Register. You should see success message about your device registration like one below.
+7. Choose Next.
+8. On the Download certificate page, choose Download certificate, then choose Save File. Note where you save the certificate file because you need it later.
+9. After the certificated has been downloaded, choose Register. You should see success message about your device registration like one below.
 
    _Important: The certificate is a .zip file. You attach it to AWS DeepLens in .zip format, so don’t unzip it. Certificates aren't reusable. You need to generate a new certificate every time you register your device._
 

@@ -7,7 +7,7 @@
 
 You can either Step 4a to automatically create IAM roles using CloudFormation or follow Step 4b to for manual steps to create required IAM roles.
 
-### 4.a Use CloudFormation Template to automatically create required IAM roles:
+4a. Use CloudFormation Template to automatically create required IAM roles:
 - [Click to launch CloudFormation Template ](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=DeepLensRoles&templateURL=https://s3.amazonaws.com/deep-learning-with-deeplens/DeepLensRoles.json)
 
 ![](assets/createstack.png)
@@ -28,7 +28,7 @@ You can either Step 4a to automatically create IAM roles using CloudFormation or
 
 - You can now move to step 5. Step 4b shows how you can create these IAM roles manually from AWS IAM console.
 
-### 4.b Create required IAM roles manually:
+4.b Create required IAM roles manually:
 
 <details>
   <summary>Click for steps to manually creating IAM roles for DeepLens</summary>

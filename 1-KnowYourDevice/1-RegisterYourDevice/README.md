@@ -127,7 +127,7 @@
 
    - You do not need to edit Device access. Just make sure that SSH is enabled under Device access.
 
-   ![](assets/certificate.png)
+   ![](assets/deviceaccess.png)
 
    - Click Finish.
 

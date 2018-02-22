@@ -104,6 +104,23 @@ You can either follow Step 5 to automatically create IAM roles using CloudFormat
 
 1. In a browser, open a new tab and navigate to http://192.168.0.1.
 
+2. If you see Device Setup summary like below, this device was previously configured and you still need to update Network connection and Certificate settings.
+
+![](assets/setupsummary.png)
+
+   - For Network Connection, click on Edit
+   - Under Connect to network, Click on Use Ethernet. _Do not use Wi-Fi._
+
+   ![](assets/networkedit.png)
+
+   - For Certificate, click on Edit
+   - Click Browse and select the certificate you downloaded during DeepLens registration and click Save.
+   _Even if you see certificate.zip already populated, make sure you still browse and select certificate you downloaded during DeepLens registration._
+
+   ![](assets/certificate.png)
+
+
+
 2. On the Device page:
 - Connect to the network.
    - For this lab we will be using Ethernet so do not choose Wi-Fi. Choose the Ethernet option and then choose Next.

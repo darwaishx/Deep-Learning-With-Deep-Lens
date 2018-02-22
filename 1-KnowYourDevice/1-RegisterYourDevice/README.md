@@ -22,7 +22,7 @@ You can either Step 4a to automatically create IAM roles using CloudFormation or
 
 - Go to https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks and select the checkbox next to stack DeepLensRoles.
 
-- Click on Resources tab and you should see five IAM roles that CloudFormationTemplate created.
+- Click on Resources tab and you should see five IAM roles that CloudFormation template created.
 
 ![](assets/createstack3.png)
 

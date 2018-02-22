@@ -128,6 +128,8 @@ _You can either follow Step 5 to automatically create IAM roles using CloudForma
      - You do not need to edit Device access. Just make sure that SSH is enabled under Device access.
 
      ![](assets/certificate.png)
+
+     - Click Finish.
    </details>
 
    <details>
@@ -145,9 +147,8 @@ _You can either follow Step 5 to automatically create IAM roles using CloudForma
         - Automatic updates— Enable this option. Enabling automatic updates keeps your device's software up-to-date.
      - Review the settings and finish setting up the device.
         - To modify settings, choose Edit for the setting that you want to change.     
+      - Click Finish.
    </details>
-
-   - Click Finish.
 
 ## Verify That Your AWS DeepLens Is Connected
 

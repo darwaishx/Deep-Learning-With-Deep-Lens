@@ -28,49 +28,46 @@ You can either Step 4a to automatically create IAM roles using CloudFormation or
 
 - You can now move to step 5. Step 4b shows how you can create these IAM roles manually from AWS IAM console.
 
-### 4.b Create required IAM roles manually:
-
 <details>
-  <summary>Click to expand</summary>
-  whatever
+  <summary>### 4.b Create required IAM roles manually:</summary>
+  Only use this step if you did not use the CloudFormation template above to automatically create required IAM roles for DeepLens.
+
+  - IAM role for AWS DeepLens
+     - From the list, choose AWSDeepLensServiceRole. If AWSDeepLensServiceRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
+     - Accept the DeepLens service and DeepLens use case by choosing Next: Permissions.
+     - Accept the AWSDeepLensServiceRolePolicy policy by choosing Next: Review.
+     - Accept the role name AWSDeepLensServiceRole and the provided description by choosing Create role. Do not change the role name.
+     - Close the IAM window.
+
+  - IAM role for AWS Greengrass service
+     - From the list, choose AWSDeepLensGreengrassRole. If AWSDeepLensGreengrassRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
+     - Accept the Greengrass service and Greengrass use case by choosing Next: Permissions.
+     - Accept the AWSGreengrassResourceAccessRolePolicy policy by choosing Next: Review.
+     - Accept the role name AWSDeepLensGreengrassRole and the provided description by choosing Create role. Do not change the role name.
+    - Close the IAM window.
+
+  - IAM role for AWS Greengrass device groups.
+     - From the list, choose AWSDeepLensGreengrassGroupRole. If AWSDeepLensGreengrassGroupRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
+     - Accept the DeepLens service and the DeepLens - Greengrass Lambda use case by choosing Next: Permissions.
+     - Accept the AWSDeepLensLambdaFunctionAccessPolicy policy by choosing Next: Review.
+     - Accept the role name AWSDeepLensGreengrassGroupRole and the provided description by choose Create role. Do not change the role name.
+     - Close the IAM window.
+
+  - IAM role for Amazon SageMaker
+     - From the list, choose AWSDeepLensSagemakerRole. If AWSDeepLensSagemakerRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
+     - Accept the SageMaker service and the SageMaker - Execution use case by choosing Next: Permissions.
+     - Accept the AmazonSageMakerFullAccess policy by choosing Next: Review.
+     - Accept the role name AWSDeepLensSageMakerRole and the provided description by choosing Create role. Do not change the role name.
+     - Close the IAM window.
+
+  - IAM role for AWS Lambda
+     - From the list, choose AWSDeepLensLambdaRole. If AWSDeepLensLambdaRole isn't listed, choose Create role in IAM and follow these steps i the IAM console.
+     - Accept the Lambda service and the Lambda use case by choosing Next: Permissions.
+     - Accept the AWSLambdaFullAccess policy by choosing Next: Review.
+     - Accept the role name AWSDeepLensLambdaRole and the provided description by choosing Create role. Do not change the role name.
+     - Close the IAM window.
 </details>
 
-Only use this step if you did not use the CloudFormation template above to automatically create required IAM roles for DeepLens.
-
-- IAM role for AWS DeepLens
-   - From the list, choose AWSDeepLensServiceRole. If AWSDeepLensServiceRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
-   - Accept the DeepLens service and DeepLens use case by choosing Next: Permissions.
-   - Accept the AWSDeepLensServiceRolePolicy policy by choosing Next: Review.
-   - Accept the role name AWSDeepLensServiceRole and the provided description by choosing Create role. Do not change the role name.
-   - Close the IAM window.
-
-- IAM role for AWS Greengrass service
-   - From the list, choose AWSDeepLensGreengrassRole. If AWSDeepLensGreengrassRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
-   - Accept the Greengrass service and Greengrass use case by choosing Next: Permissions.
-   - Accept the AWSGreengrassResourceAccessRolePolicy policy by choosing Next: Review.
-   - Accept the role name AWSDeepLensGreengrassRole and the provided description by choosing Create role. Do not change the role name.
-  - Close the IAM window.
-
-- IAM role for AWS Greengrass device groups.
-   - From the list, choose AWSDeepLensGreengrassGroupRole. If AWSDeepLensGreengrassGroupRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
-   - Accept the DeepLens service and the DeepLens - Greengrass Lambda use case by choosing Next: Permissions.
-   - Accept the AWSDeepLensLambdaFunctionAccessPolicy policy by choosing Next: Review.
-   - Accept the role name AWSDeepLensGreengrassGroupRole and the provided description by choose Create role. Do not change the role name.
-   - Close the IAM window.
-
-- IAM role for Amazon SageMaker
-   - From the list, choose AWSDeepLensSagemakerRole. If AWSDeepLensSagemakerRole isn't listed, choose Create role in IAM and follow these steps in the IAM console.
-   - Accept the SageMaker service and the SageMaker - Execution use case by choosing Next: Permissions.
-   - Accept the AmazonSageMakerFullAccess policy by choosing Next: Review.
-   - Accept the role name AWSDeepLensSageMakerRole and the provided description by choosing Create role. Do not change the role name.
-   - Close the IAM window.
-
-- IAM role for AWS Lambda
-   - From the list, choose AWSDeepLensLambdaRole. If AWSDeepLensLambdaRole isn't listed, choose Create role in IAM and follow these steps i the IAM console.
-   - Accept the Lambda service and the Lambda use case by choosing Next: Permissions.
-   - Accept the AWSLambdaFullAccess policy by choosing Next: Review.
-   - Accept the role name AWSDeepLensLambdaRole and the provided description by choosing Create role. Do not change the role name.
-   - Close the IAM window.
 
 5. In AWS DeepLens, on the Set permissions page, choose Refresh IAM roles, then do the following:
    - For IAM role for AWS DeepLens, choose AWSDeepLensServiceRole.

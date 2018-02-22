@@ -112,29 +112,27 @@
 
 ![](assets/setupsummary.png)
 
-   <details>
-     <summary>Edit Pre-configured device</summary>
+### Edit Pre-configured device
 
-     - For Network Connection, click on Edit
-     - Under Connect to network, Click on Use Ethernet. _Do not use Wi-Fi._
+   - For Network Connection, click on Edit
+   - Under Connect to network, Click on Use Ethernet. _Do not use Wi-Fi._
 
-     ![](assets/networkedit.png)
+   ![](assets/networkedit.png)
 
-     - For Certificate, click on Edit
-     - Click Browse and select the certificate you downloaded during DeepLens registration and click Save.
-     _Even if you see certificate.zip already populated, make sure you still browse and select certificate you downloaded during DeepLens registration._
+   - For Certificate, click on Edit
+   - Click Browse and select the certificate you downloaded during DeepLens registration and click Save.
+   _Even if you see certificate.zip already populated, make sure you still browse and select certificate you downloaded during DeepLens registration._
 
-     ![](assets/certificate.png)
+   ![](assets/certificate.png)
 
-     - You do not need to edit Device access. Just make sure that SSH is enabled under Device access.
+   - You do not need to edit Device access. Just make sure that SSH is enabled under Device access.
 
-     ![](assets/certificate.png)
+   ![](assets/certificate.png)
 
-     - Click Finish.
-   </details>
+   - Click Finish.
 
    <details>
-     <summary>Setup new device</summary>
+   <summary>Setup new device</summary>
 
      On the Device page:
      - Connect to the network.

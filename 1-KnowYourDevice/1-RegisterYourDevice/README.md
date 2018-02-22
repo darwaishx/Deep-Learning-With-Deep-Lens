@@ -28,7 +28,7 @@
 
  ![](assets/createstack3.png)
 
- - You can now move to step 7. Step 6 shows how you can create these IAM roles manually from AWS IAM console.
+ - You can now move to step 5.
 
   <details>
     <summary>Manual steps to create IAM roles for DeepLens</summary>

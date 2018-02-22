@@ -8,30 +8,27 @@
 
 4. If this is your first time registering an AWS DeepLens device, create the following AWS Identity and Access Management (IAM) roles. They give AWS DeepLens the permissions it needs to perform tasks on your behalf. If you have already created these roles, skip to step 5 otherwise follow CloudFormation or manual steps below to create required IAM roles.
 
-  <details>
-    <summary>Steps to use CloudFormation to automatically create required IAM roles for DeepLens</summary>
+### Steps to use CloudFormation to automatically create required IAM roles for DeepLens
 
-      [Click to launch CloudFormation Template ](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=DeepLensRoles&templateURL=https://s3.amazonaws.com/deep-learning-with-deeplens/DeepLensRoles.json)
+ - [Click to launch CloudFormation Template ](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=DeepLensRoles&templateURL=https://s3.amazonaws.com/deep-learning-with-deeplens/DeepLensRoles.json)
 
-      ![](assets/createstack.png)
+ ![](assets/createstack.png)
 
-      - Select the checkbox "I acknowledge that AWS CloudFormation might create IAM resources with custom names." and click Create.
+ - Select the checkbox "I acknowledge that AWS CloudFormation might create IAM resources with custom names." and click Create.
 
-      ![](assets/createstack2.png)
+ ![](assets/createstack2.png)
 
-      - Wait for few seconds and refresh the screen to find that status is CREATE_COMPLETE.
+ - Wait for few seconds and refresh the screen to find that status is CREATE_COMPLETE.
 
-      ![](assets/createstack3.png)
+ ![](assets/createstack3.png)
 
-      - Go to https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks and select the checkbox next to stack DeepLensRoles.
+ - Go to https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks and select the checkbox next to stack DeepLensRoles.
 
-      - Click on Resources tab and you should see five IAM roles that CloudFormation template created.
+ - Click on Resources tab and you should see five IAM roles that CloudFormation template created.
 
-      ![](assets/createstack3.png)
+ ![](assets/createstack3.png)
 
-      - You can now move to step 7. Step 6 shows how you can create these IAM roles manually from AWS IAM console.
-
-  </details>
+ - You can now move to step 7. Step 6 shows how you can create these IAM roles manually from AWS IAM console.
 
   <details>
     <summary>Manual steps to create IAM roles for DeepLens</summary>

@@ -115,7 +115,7 @@
 ### Edit Pre-configured device
 
    - For Network Connection, click on Edit
-   - Under Connect to network, Click on Use Ethernet. _Do not use Wi-Fi._
+   - Under Connect to network, Click on Use Ethernet. _In this lab, we are using Ether so do not use Wi-Fi._
 
    ![](assets/networkedit.png)
 

@@ -1,6 +1,6 @@
 # Local Resources
 
-##Path for lambda deployment
+## Path for lambda deployment
 ```
 /opt/awscam/greengrass/ggc/deployemnent (should see arn of lambda)
 ```

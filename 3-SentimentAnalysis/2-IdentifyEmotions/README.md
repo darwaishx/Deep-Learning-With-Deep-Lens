@@ -10,7 +10,7 @@
 
 ## Create a role for Lambda function
 
-- Go to IAM Console at https://console.aws.amazon.com/console/home?region=us-east-1
+- Go to IAM Console at https://console.aws.amazon.com/iam/home?region=us-east-1#
 - Choose 'Create Role'
 - Select “AWS Service”
 - Select “Lambda” and choose "Next:Permissions"

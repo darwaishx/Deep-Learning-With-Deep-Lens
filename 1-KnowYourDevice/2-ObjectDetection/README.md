@@ -71,11 +71,11 @@ ssh aws_cam@192.168.86.120 cat /tmp/results.mjpeg | mplayer -demuxer lavf -lavfd
 
 ### For Windows
 
-1. You will need to use 7zip to extract the MPlayer executable. You can install 7zip by running the executable at the following link: 
+1. You will need to use 7zip to extract the MPlayer executable. You can install 7zip by running the executable at the following link:
 * 64-bit: http://www.7-zip.org/a/7z1801-x64.exe
 * 32-bit: http://www.7-zip.org/a/7z1801.exe
 
-2. After you have installed 7zip, download the MPlayer 7z archive at the following link, and then use 7zip to extract the contents of the archive: 
+2. After you have installed 7zip, download the MPlayer 7z archive at the following link, and then use 7zip to extract the contents of the archive:
 * 64-bit: http://sourceforge.net/projects/mplayerwin/files/MPlayer-MEncoder/r38017/mplayer-svn-38017-x86_64.7z/download
 * 32-bit: http://sourceforge.net/projects/mplayerwin/files/MPlayer-MEncoder/r38017/mplayer-svn-38017.7z/download
 
@@ -120,4 +120,4 @@ You can also view the log messages that your project's Lambda function running o
 ![](assets/dlmessages.png)
 
 ## Completion
-You have create and deployed object detection project to your Deeplens device. In the next module, [Hot Dog Not Hot Dog](../3-HotDogNotHotDog), you will learn how to edit a pre-trained object recognition model in SageMaker to perform a binary classification and deploy newly trained model to the device.
+You have create and deployed object detection project to your Deeplens device.

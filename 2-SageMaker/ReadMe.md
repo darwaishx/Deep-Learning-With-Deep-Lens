@@ -21,4 +21,4 @@ In this lab you will learn the following:
 
 This lab has following module:
 
-- [Build Face Detection model using Amazon SageMaker](1-SageMakerFaceDetection)
+- [Build Face Detection model using Amazon SageMaker](1-FaceDetection)

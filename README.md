@@ -28,10 +28,10 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
   - Face detection with DeepLens
   - Sentiment analysis using Rekognition
 ### 01:00 PM - 03:00 PM
-[End-to-end solution for face detection, recognition and verification](3-FaceDetectionAndVerification)
+[End-to-end solution for face detection, recognition and verification](4-FaceDetectionAndVerification)
    - Face detection with DeepLens
    - Rekognition
    - Approval Workflow (Optional Homework)
    - Bring it all together (Optional Homework)
 ### 02:45 PM - 03:00 PM
-[Additional project ideas/Hackathon](4-ProjectIdeas)
+[Additional project ideas/Hackathon](5-ProjectIdeas)

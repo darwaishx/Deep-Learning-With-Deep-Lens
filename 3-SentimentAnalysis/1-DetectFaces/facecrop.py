@@ -1,15 +1,30 @@
 #
-# Copyright Amazon AWS DeepLens, 2017.
+# Copyright Amazon AWS DeepLens, 2017
 #
 
 import os
+import sys
+import datetime
 import greengrasssdk
 from threading import Timer
 import time
 import awscam
 import cv2
 from threading import Thread
-import base64
+import urllib
+import zipfile
+
+#boto3 is not installed on device by default.
+
+boto_dir = '/tmp/boto_dir'
+if not os.path.exists(boto_dir):
+    os.mkdir(boto_dir)
+urllib.urlretrieve("https://s3.amazonaws.com/dear-demo/boto_3_dist.zip", "/tmp/boto_3_dist.zip")
+with zipfile.ZipFile("/tmp/boto_3_dist.zip", "r") as zip_ref:
+    zip_ref.extractall(boto_dir)
+sys.path.append(boto_dir)
+
+import boto3
 
 # Creating a greengrass core sdk client
 client = greengrasssdk.client('iot-data')
@@ -19,20 +34,11 @@ client = greengrasssdk.client('iot-data')
 # This is the topic that this code uses to send messages to cloud
 iotTopic = '$aws/things/{}/infer'.format(os.environ['AWS_IOT_THING_NAME'])
 
-def cropFace(img, x, y, w, h):
-
-    #Crop face
-    cimg = img[y:y+h, x:x+w]
-
-    #Convert to jpeg
-    ret,jpeg = cv2.imencode('.jpg', cimg)
-    face = base64.b64encode(jpeg.tobytes())
-
-    return face
-
 ret, frame = awscam.getLastFrame()
-ret,jpeg = cv2.imencode('.jpg', frame)
+ret, jpeg = cv2.imencode('.jpg', frame)
+
 Write_To_FIFO = True
+
 class FIFO_Thread(Thread):
     def __init__(self):
         ''' Constructor. '''
@@ -42,13 +48,38 @@ class FIFO_Thread(Thread):
         fifo_path = "/tmp/results.mjpeg"
         if not os.path.exists(fifo_path):
             os.mkfifo(fifo_path)
-        f = open(fifo_path,'w')
+        f = open(fifo_path, 'w')
         client.publish(topic=iotTopic, payload="Opened Pipe")
         while Write_To_FIFO:
             try:
                 f.write(jpeg.tobytes())
             except IOError as e:
                 continue
+
+def push_to_s3(img, index):
+    try:
+        bucket_name = "<BUCKET_NAME>"
+
+        timestamp = int(time.time())
+        now = datetime.datetime.now()
+        key = "faces/{}_{}/{}_{}/{}_{}.jpg".format(now.month, now.day,
+                                                   now.hour, now.minute,
+                                                   timestamp, index)
+
+        s3 = boto3.client('s3')
+
+        encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90]
+        _, jpg_data = cv2.imencode('.jpg', img, encode_param)
+        response = s3.put_object(ACL='public-read',
+                                 Body=jpg_data.tostring(),
+                                 Bucket=bucket_name,
+                                 Key=key)
+
+        client.publish(topic=iotTopic, payload="Response: {}".format(response))
+        client.publish(topic=iotTopic, payload="Face pushed to S3")
+    except Exception as e:
+        msg = "Pushing to S3 failed: " + str(e)
+        client.publish(topic=iotTopic, payload=msg)
 
 def greengrass_infinite_infer_run():
     try:
@@ -82,48 +113,39 @@ def greengrass_infinite_infer_run():
             if ret == False:
                 raise Exception("Failed to get frame from the stream")
 
-
             # Resize frame to fit model input requirement
             frameResize = cv2.resize(frame, (input_width, input_height))
 
             # Run model inference on the resized frame
             inferOutput = model.doInference(frameResize)
 
-
             # Output inference result to the fifo file so it can be viewed with mplayer
             parsed_results = model.parseResult(modelType, inferOutput)['ssd']
+            # client.publish(topic=iotTopic, payload = json.dumps(parsed_results))
             label = '{'
-            for obj in parsed_results:
+            for i, obj in enumerate(parsed_results):
                 if obj['prob'] < prob_thresh:
                     break
+                offset = 25
                 xmin = int( xscale * obj['xmin'] ) + int((obj['xmin'] - input_width/2) + input_width/2)
                 ymin = int( yscale * obj['ymin'] )
                 xmax = int( xscale * obj['xmax'] ) + int((obj['xmax'] - input_width/2) + input_width/2)
                 ymax = int( yscale * obj['ymax'] )
 
-                #Crop face
-                ################
-                client.publish(topic=iotTopic, payload = "cropping face")
-                try:
-                    cimage = cropFace(frame, xmin, ymin, xmax-xmin, ymax-ymin)
-                    lblconfidence = '"confidence" : ' + str(obj['prob'])
-                    client.publish(topic=iotTopic, payload = '{ "face" : "' + cimage + '", '  +  lblconfidence + '}')
-                except Exception as e:
-                    msg = "Crop image failed: " + str(e)
-                    client.publish(topic=iotTopic, payload=msg)
-                client.publish(topic=iotTopic, payload = "Crop face complete")
-                ################
+                crop_img = frame[ymin:ymax, xmin:xmax]
 
+                push_to_s3(crop_img, i)
 
                 cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (255, 165, 20), 4)
                 label += '"{}": {:.2f},'.format(str(obj['label']), obj['prob'] )
                 label_show = '{}: {:.2f}'.format(str(obj['label']), obj['prob'] )
-                cv2.putText(frame, label_show, (xmin, ymin-15),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 165, 20), 4)
+                cv2.putText(frame, label_show, (xmin, ymin-15),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 165, 20), 4)
             label += '"null": 0.0'
             label += '}'
-            #client.publish(topic=iotTopic, payload = label)
+            client.publish(topic=iotTopic, payload=label)
             global jpeg
-            ret,jpeg = cv2.imencode('.jpg', frame)
+            ret, jpeg = cv2.imencode('.jpg', frame)
 
     except Exception as e:
         msg = "Test failed: " + str(e)

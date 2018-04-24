@@ -4,7 +4,7 @@ Amazon SageMaker is a fully-managed platform that enables developers and data sc
 
 Amazon SageMaker removes the complexity that holds back developer success with each of these steps. Amazon SageMaker includes modules that can be used together or independently to build, train, and deploy your machine learning models.
 
-![](assets/sagemaker.png)
+![](assets/sm.png)
 
 ## Learning Objectives of This Lab
 

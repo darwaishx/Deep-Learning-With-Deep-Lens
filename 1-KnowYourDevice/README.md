@@ -32,8 +32,6 @@ In this lab you will learn the following:
 - Creating a DeepLens project using the object detection template.
 - Deploying model to the device.
 - Checking the output on the video stream.
-- Edit a pre-trained object recognition model in SageMaker to perform a binary classification
-- Deploying newly trained model to the device
 
 ## Modules
 
@@ -41,4 +39,3 @@ This lab has following modules:
 
 - [Register Your Device](1-RegisterYourDevice)
 - [Object Detection](2-ObjectDetection)
-- [Hot Dog Or Not Hot Dog](3-HotDogNotHotDog)

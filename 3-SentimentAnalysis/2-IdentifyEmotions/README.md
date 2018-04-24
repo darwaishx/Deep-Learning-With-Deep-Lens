@@ -1,6 +1,6 @@
 # Identify Emotions
 
-## Create DynamoDB table**
+## Create DynamoDB Table
 
 - Go to DynamoDB Console at https://console.aws.amazon.com/dynamodb/home?region=us-east-1#
 - Click on Create Table.
@@ -8,7 +8,7 @@
  - Primary key: s3key
 - Click "Create" to create DynamoDB table.
 
-## Create a role for cloud lambda function**
+## Create a role for Lambda function
 
 - Go to IAM Console at https://console.aws.amazon.com/console/home?region=us-east-1
 - Choose 'Create Role'
@@ -23,7 +23,7 @@
 - Provide a name for the role: rekognizeEmotions
 - Choose 'Create role'
 
-## Create a lambda function to detect emotions
+## Create a Lambda function to Detect Emotions
 
 1. Go to Lambda Console at https://console.aws.amazon.com/lambda/home?region=us-east-1
 2. Click 'Create function'
@@ -33,8 +33,7 @@
  - Role: Choose an existing role
  - Existing role: rekognizeEmotions
  - Choose Create function
-4. Replace the default script with the script in  [recognize-emotions.py](rekognize-emotions.py).
-
+4. Replace the default script with the script in [recognize-emotions.py](rekognize-emotions.py).
 5. Update the table name in lambda function with the name of DynamoDB table your created earlier.
 6. Next, we need to add the event that triggers this lambda function. This will be an “S3:ObjectCreated” event that happens every time a face is uploaded to the face S3 bucket. Add S3 trigger from designer section on the left.
 7. Configure with the following:

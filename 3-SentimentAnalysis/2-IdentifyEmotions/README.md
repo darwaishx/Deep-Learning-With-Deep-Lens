@@ -15,10 +15,10 @@
 - Select “AWS Service”
 - Select “Lambda” and choose "Next:Permissions"
 - Attach the following policies:
- * AmazonDynamoDBFullAcces
- * AmazonS3FullAccess
- * AmazonRekognitionFullAccess
- * CloudWatchFullAccess
+  - AmazonDynamoDBFullAcces
+  - AmazonS3FullAccess
+  - AmazonRekognitionFullAccess
+  - CloudWatchFullAccess
 - Click Next
 - Provide a name for the role: rekognizeEmotions
 - Choose 'Create role'

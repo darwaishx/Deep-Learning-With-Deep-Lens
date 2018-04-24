@@ -1,53 +1,18 @@
-# Amazon SageMaker
+# Build, train and deploy Face Detection model using Amazon SageMaker
 
-Amazon SageMaker is a fully-managed platform that enables developers and data scientists to quickly and easily build, train, and deploy machine learning models at any scale. Amazon SageMaker removes all the barriers that typically slow down developers who want to use machine learning.
+In this module, you will learn how to build and train a face detection model using Amazon SageMaker.
 
-Amazon SageMaker removes the complexity that holds back developer success with each of these steps. Amazon SageMaker includes modules that can be used together or independently to build, train, and deploy your machine learning models.
+## Create SageMaker Notebook Instance
 
-![](assets/sagemaker.png)
+1. Go to SageMaker console at https://console.aws.amazon.com/sagemaker/home?region=us-east-1#/landing
 
-## Learning Objectives of This Lab
+### Make sure you have us-east-1 selected as region.
 
-In this lab you will learn the following:
+2. Click on Create Notebook instance
 
-- Launch your notebook instance and open its Jupyter interface
-- Amazon Algorithms - Reliable ML in Scale
-- Training Models with a Training Job
-- Tuning Models with Hyper-parameter Optimization (HPO)
-- Hosting Inference Endpoint
-- Build, train and deploy face detection model with Amazon SageMaker
+![sagemaker home](assets/sm01.png)
 
-## Modules
-
-This lab has following module:
-
-- [Build Face Detection model using Amazon SageMaker](1-SageMakerFaceDetection)
-
-
-
-
-
-
-In this lab session, you will learn how to build and train a model in Amazon SageMaker
-
-Before we begin, download the repo to your local directory. You can download the repo from [root directory](https://github.com/fibbonnaci/DeepLens-workshops)
-
-Click **Clone or download** button on the right.
-
-![github clone-edited](https://user-images.githubusercontent.com/11222214/38658212-046fee60-3dd9-11e8-9069-a71804c222b7.jpg)
-
-This will download the repo as a zip file. Extract the zip file.
-
-### Step 1- Create notebook instance
-
-Go to SageMaker console: https://console.aws.amazon.com/sagemaker
-
-Click on Create Notebook instance
-
-
-![sagemaker home](https://user-images.githubusercontent.com/11222214/38313489-01929ca2-37d9-11e8-9ffb-4385e8d13da3.JPG)
-
-### Step 2- Notebook specifications
+## Step 2- Notebook specifications
 
 1. Provide the name of the notebook as face-detection
 2. Notebook instance type- ml.t2.medium

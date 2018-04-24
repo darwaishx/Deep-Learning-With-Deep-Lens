@@ -19,7 +19,7 @@ In this module, you will learn how to build and train a face detection model usi
 
   ![](assets/sm02.png)
 
-- Leave defaults for VPC, Lifecycle configuration and encryption key and click 'Create notebook instance'
+- Leave defaults for VPC, Lifecycle configuration and encryption key and click 'Create notebook instance'.
 
 ![](assets/sm03.png)
 

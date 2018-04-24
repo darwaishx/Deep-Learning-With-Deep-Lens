@@ -15,20 +15,19 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
 [Get to know your Device](1-KnowYourDevice)
    - Register you DeepLens device
    - Object detection with DeepLens
-   - Hot Dog or Not Hog Dog - Edit a pre-trained model in SageMaker and deploy on DeepLens (Optional Homework)
 ### 11:00 AM - 01:00 PM
-[End-to-end solution for face detection, recognition and verification](2-FaceDetectionAndVerification)
-   - Face detection with DeepLens
-   - Rekognition
-   - Approval Workflow (Optional Homework)
-   - Bring it all together (Optional Homework)
-### 01:00 PM - 02:00 PM
-Sage Maker overview 
+[Amazon Sage Maker](2-SageMaker)
    - Launch your notebook instance and open its Jupyter interface
    - Amazon Algorithms - Reliable ML in Scale
    - Training Models with a Training Job
    - Tuning Models with Hyper-parameter Optimization (HPO)
-   - Hosting Inference Endpoint 
-### 02:00 PM - 03:00 PM
-Build your own Image Classification and Deploy it to DeepLens
-[Additional project ideas/Hackathon](3-ProjectIdeas)
+   - Hosting Inference Endpoint
+   - Build, train and deploy face detection model with Amazon SageMaker
+### 01:00 PM - 02:45 PM
+[End-to-end solution for face detection, recognition and verification](3-FaceDetectionAndVerification)
+   - Face detection with DeepLens
+   - Rekognition
+   - Approval Workflow (Optional Homework)
+   - Bring it all together (Optional Homework)
+### 02:45 PM - 03:00 PM
+[Additional project ideas/Hackathon](4-ProjectIdeas)

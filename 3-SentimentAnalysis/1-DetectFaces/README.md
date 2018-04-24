@@ -16,9 +16,14 @@ In this section you will update the lambda function that is part of face detecti
 
 1. Using your browser, open the AWS Lambda console at https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions.
 2. In the search box type deeplens-face-detection to find the lambda function for your project and click on the name of your lambda function.
-3. Replace code in lambda function with code from [facecrop.py](facecrop.py) and click Save.
-4. Click on Action and then Publish a new version.
-5. Enter version description and click Publish.
+3. Replace code in lambda function with code from [facecrop.py](facecrop.py).
+4. Update <BUCKET_NAME> with the name of S3 bucket you created above _[Your name or username]-dl-faces_.
+
+![](images/bucketname.png)
+
+5. Click Save.
+6. Click on Action and then Publish a new version.
+7. Enter version description and click Publish.
 
 ## Create Your Project
 

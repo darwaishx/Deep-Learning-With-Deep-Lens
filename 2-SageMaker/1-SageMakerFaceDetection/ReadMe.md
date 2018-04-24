@@ -5,8 +5,7 @@ In this module, you will learn how to build and train a face detection model usi
 ## Create SageMaker Notebook Instance
 
 1. Go to SageMaker console at https://console.aws.amazon.com/sagemaker/home?region=us-east-1#/landing
-
-___Make sure you have us-east-1 selected as region.___
+  ___Make sure you have us-east-1 selected as region.___
 
 2. Click on Create Notebook instance
 
@@ -19,7 +18,7 @@ ___Make sure you have us-east-1 selected as region.___
   - Under Create an IAM role: Select "Any S3 bucket" and click "Create role".
   ![](assets/sm02.png)
 - Leave defaults for VPC, Lifecycle configuration and encryption key:
-![](sm03.png)
+![](assets/sm03.png)
 - Click 'Create notebook instance'
 
 ### Step 3- View notebook instances

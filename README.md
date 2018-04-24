@@ -11,11 +11,11 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
 
 ## Agenda
 
-### 09:00 AM - 11:00 AM
+### 09:00 AM - 10:30 AM
 [Get to know your Device](1-KnowYourDevice)
    - Register you DeepLens device
    - Object detection with DeepLens
-### 11:00 AM - 01:00 PM
+### 10:30 AM - 12:00 PM
 [Amazon Sage Maker](2-SageMaker)
    - Launch your notebook instance and open its Jupyter interface
    - Amazon Algorithms - Reliable ML in Scale
@@ -23,7 +23,11 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
    - Tuning Models with Hyper-parameter Optimization (HPO)
    - Hosting Inference Endpoint
    - Build, train and deploy face detection model with Amazon SageMaker
-### 01:00 PM - 02:45 PM
+### 12:00 PM - 01:00 PM
+[Sentiment Analysis](3-SentimentAnalysis)
+  - Face detection with DeepLens
+  - Sentiment analysis using Rekognition
+### 01:00 PM - 03:00 PM
 [End-to-end solution for face detection, recognition and verification](3-FaceDetectionAndVerification)
    - Face detection with DeepLens
    - Rekognition

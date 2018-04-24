@@ -6,7 +6,7 @@ In this module, you will learn how to build and train a face detection model usi
 
 1. Go to SageMaker console at https://console.aws.amazon.com/sagemaker/home?region=us-east-1#/landing
 
-### Make sure you have us-east-1 selected as region.
+___Make sure you have us-east-1 selected as region.___
 
 2. Click on Create Notebook instance
 

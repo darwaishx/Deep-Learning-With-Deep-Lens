@@ -10,20 +10,15 @@ In this module, you will learn how to build and train a face detection model usi
 
 2. Click on Create Notebook instance
 
-![sagemaker home](assets/sm01.png)
+![](assets/sm01.png)
 
-## Step 2- Notebook specifications
+3. Under Notebook instance settings:
+- Notebook instance name: Enter a name eg: DeepLearning
+- Notebook instance type: ml.t2.medium
+- IAM role: Click on 'Create a new role'
+  - Under Create an IAM role: Select "Any S3 bucket" and click "Create role".
 
-1. Provide the name of the notebook as face-detection
-2. Notebook instance type- ml.t2.medium
-3. IAM role- Click 'Create a new role'
-
-In the dialog box that opens up:
-
-1. Click 'Any S3 bucket'
-2. Leave the rest as is. Click 'Create role'
-
-![create iam role](https://user-images.githubusercontent.com/11222214/38313888-e07281e4-37d9-11e8-8b99-dd322a76ced6.JPG)
+  ![](sm02.png)
 
 
 Leave VPC, Lifecycle and Encryption key as defaults. Dont make any changes

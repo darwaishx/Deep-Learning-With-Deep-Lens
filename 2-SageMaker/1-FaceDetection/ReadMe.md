@@ -56,23 +56,15 @@ You can upload individual notebooks using Jypyter UI, but in this lab we will us
 ![](assets/sm09.png)
 
 - Go back to Jupyter UI, and you should see folder "Deep-Learning-With-Deep-Lens".
+
+![](assets/sm10.png)
+
 - Click on "Deep-Learning-With-Deep-Lens", then "2-SageMaker", then "1-FaceDetection" and click on notebook FaceDetection.ipyb
 
+![](assets/sm11.png)
 
-Choose Upload button on the jupyter page
+## Execute Notebook
 
-Find the SSD_Object_Detection_SageMaker_v3.ipynb file (You can find it in the sagemaker lab directory of the extracted repo. You downloaded and extracted the zip file earlier in the process)
+- You can execute notebook cells by either clicking on run button in the menu or using shift+ enter on your keyboard.
 
-Choose Upload
-
-You can choose your uploaded notebook and click on 'Open'.
-
-This will open your Jupyter notebook.
-
-![jupyter](https://user-images.githubusercontent.com/11222214/38314946-427aa6e4-37dc-11e8-91bf-658ebe7b2a7b.JPG)
-
-### Step 5- Execute notebook
-
-1. Execute the cells by clicking on run button or using shift+ enter on your keyboard
-
-![run](https://user-images.githubusercontent.com/11222214/38316244-21a07194-37df-11e8-9821-21d5d6e57976.JPG)
+![](assets/sm12.png)

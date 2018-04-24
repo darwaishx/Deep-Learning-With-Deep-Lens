@@ -68,3 +68,7 @@ You can upload individual notebooks using Jypyter UI, but in this lab we will us
 - You can execute notebook cells by either clicking on run button in the menu or using shift+ enter on your keyboard.
 
 ![](assets/sm12.png)
+
+- After you successfully train and deploy your face detection model, last cell in the notebook will test the trained model.
+
+![](assets/sm13.png)

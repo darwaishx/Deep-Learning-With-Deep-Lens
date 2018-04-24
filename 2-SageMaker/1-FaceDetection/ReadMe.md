@@ -27,13 +27,37 @@ In this module, you will learn how to build and train a face detection model usi
 
 ![](assets/sm04.png)
 
-## View notebook instances
+## View Notebook Instance
 
-You can view all your notebook instances by choosing Notebook on the left menu. It will take couple of minutes for the notebook instance to be created.
+Once the status of your notebook instance is in InService, click on link "Open" under Actions.
 
-![instances](https://user-images.githubusercontent.com/11222214/38314549-541e9140-37db-11e8-89eb-ec9be1677271.JPG)
+![](assets/sm05.png)
 
-### Step 4- Upload and Open notebook
+You should see Jupyter UI with sample-notebooks folder that contains various sample notebooks.
+
+![](assets/sm06.png)
+
+## Upload and Open Notebook
+
+You can upload individual notebooks using Jypyter UI, but in this lab we will use git to bring notebook in our SageMaker instance.
+
+- Click on New and choose Terminal from the drop down list.
+
+![](assets/sm07.png)
+
+- You should get a console in a new browser tab:
+
+![](assets/sm08.png)
+
+- Type: "cd SageMaker" command to go to SageMaker directory.
+- Type: "git clone https://github.com/darwaishx/Deep-Learning-With-Deep-Lens.git" command to clone github repo.
+- Type: "ls" command and you should now see a folder "Deep-Learning-With-Deep-Lens"
+
+![](assets/sm09.png)
+
+- Go back to Jupyter UI, and you should see folder "Deep-Learning-With-Deep-Lens".
+- Click on "Deep-Learning-With-Deep-Lens", then "2-SageMaker", then "1-FaceDetection" and click on notebook FaceDetection.ipyb
+
 
 Choose Upload button on the jupyter page
 

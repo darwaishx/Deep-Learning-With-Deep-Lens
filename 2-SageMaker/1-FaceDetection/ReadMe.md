@@ -72,3 +72,6 @@ You can upload individual notebooks using Jypyter UI, but in this lab we will us
 - After you successfully train and deploy your face detection model, last cell in the notebook will test the trained model.
 
 ![](assets/sm13.png)
+
+## Completion
+You have successfully build, trained and deployed a face detection model using SageMaker.

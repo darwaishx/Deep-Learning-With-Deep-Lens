@@ -31,7 +31,7 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
 [End-to-end solution for face detection, recognition and verification](4-FaceDetectionAndVerification)
    - Face detection with DeepLens
    - Rekognition
-   - Approval Workflow (Optional Homework)
-   - Bring it all together (Optional Homework)
+   - Approval Workflow
+   - Bring it all together
 ### 02:45 PM - 03:00 PM
 [Additional project ideas/Hackathon](5-ProjectIdeas)

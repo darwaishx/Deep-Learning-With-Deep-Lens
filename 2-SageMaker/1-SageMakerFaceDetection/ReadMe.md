@@ -17,15 +17,10 @@ In this module, you will learn how to build and train a face detection model usi
 - Notebook instance type: ml.t2.medium
 - IAM role: Click on 'Create a new role'
   - Under Create an IAM role: Select "Any S3 bucket" and click "Create role".
-
-  ![](sm02.png)
-
-
-Leave VPC, Lifecycle and Encryption key as defaults. Dont make any changes
-
-![notebook instance setting](https://user-images.githubusercontent.com/11222214/38313994-2916257c-37da-11e8-823a-733f2572f61d.JPG)
-
-Click 'Create notebook instance'
+  ![](assets/sm02.png)
+- Leave defaults for VPC, Lifecycle configuration and encryption key:
+![](sm03.png)
+- Click 'Create notebook instance'
 
 ### Step 3- View notebook instances
 

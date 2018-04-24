@@ -28,20 +28,20 @@
 1. Go to Lambda Console at https://console.aws.amazon.com/lambda/home?region=us-east-1
 2. Click 'Create function'
 3. Choose 'Author from scratch'
- - Name the function: recognize-emotion-your-name.  
- - Runtime: Choose Python 2.7
- - Role: Choose an existing role
- - Existing role: rekognizeEmotions
- - Choose Create function
+  - Name the function: recognize-emotion-your-name.  
+  - Runtime: Choose Python 2.7
+  - Role: Choose an existing role
+  - Existing role: rekognizeEmotions
+  - Choose Create function
 4. Replace the default script with the script in [recognize-emotions.py](rekognize-emotions.py).
 5. Update the table name in lambda function with the name of DynamoDB table your created earlier.
 6. Next, we need to add the event that triggers this lambda function. This will be an “S3:ObjectCreated” event that happens every time a face is uploaded to the face S3 bucket. Add S3 trigger from designer section on the left.
 7. Configure with the following:
- - Bucket name: face-detection-your-name (you created this bucket earlier)
- - Event type- Object Created
- - Prefix- faces/
- - Filter- .jpg
- - Enable trigger- ON (keep the checkbox on)
+  - Bucket name: face-detection-your-name (you created this bucket earlier)
+  - Event type- Object Created
+  - Prefix- faces/
+  - Filter- .jpg
+  - Enable trigger- ON (keep the checkbox on)
 8. Save the lambda function
 9. Under 'Actions' tab choose **Publish**
 

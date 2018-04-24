@@ -1,4 +1,4 @@
-# Build, train and deploy Face Detection model using Amazon SageMaker ABC
+# Build, train and deploy Face Detection model using Amazon SageMaker
 
 In this module, you will learn how to build and train a face detection model using Amazon SageMaker.
 

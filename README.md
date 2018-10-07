@@ -35,3 +35,6 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
    - Bring it all together
 ### 02:45 PM - 03:00 PM
 [Additional project ideas/Hackathon](5-ProjectIdeas)
+
+## Clean Up
+After completing the labs in this workshop ensure you delete all the resources created in your AWS account during the labs so that no further costs are incurred.

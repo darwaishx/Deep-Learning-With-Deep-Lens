@@ -37,4 +37,4 @@ Basic requirement: Hands-on experience with python, and basic understanding of A
 [Additional project ideas/Hackathon](5-ProjectIdeas)
 
 ## Clean Up
-After completing the labs in this workshop ensure you delete all the resources created in your AWS account during the labs so that no further costs are incurred.
+After completing the labs in this workshop ensure you delete all the resources created in your AWS account during the labs so that no further costs are incurred. Any labs where you create SageMaker instance and publish and model using SageMaker, you should also delete the endpoint (this also deletes the ML compute instance or instances, the endpoint configuration, the model and the the notebook instance. You will need to stop the instance before deleting it.

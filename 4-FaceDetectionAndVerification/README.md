@@ -13,3 +13,6 @@ This lab has following modules:
 - [2-Rekognition](2-Rekognition)
 - [3-ApprovalWorkflow](3-ApprovalWorkflow)
 - [4-BringingItAllTogether](4-BringingItAllTogether)
+
+## Clean Up
+After completing the labs in this workshop ensure you delete all the resources created in your AWS account during the labs so that no further costs are incurred.

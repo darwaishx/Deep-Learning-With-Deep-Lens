@@ -39,3 +39,6 @@ This lab has following modules:
 
 - [Register Your Device](1-RegisterYourDevice)
 - [Object Detection](2-ObjectDetection)
+
+## Clean Up
+After completing the labs in this workshop ensure you delete all the resources created in your AWS account during the labs so that no further costs are incurred.
